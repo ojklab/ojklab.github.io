@@ -1,0 +1,47 @@
+<html>
+
+<body>
+  <!-- HTML -->
+  <div id="app">
+    <h1>図書館API</h1>
+    <p>カーリルの図書館API［<a href="https://calil.jp/doc/api.html" target="_blank">リンク</a>］</p>
+    <p><button @click="getLibrary()">図書館一覧</button></p>
+    <p v-if="apidata">{{apidata}}</p>
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    
+    /* Vueの外側にこの関数を書く（関数名は変更可） */
+    function getJSONP(response) {
+      console.log(response);
+      app.apidata = response;  // let app = new Vue() とした場合
+    }
+
+    axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded";
+
+    let app = new Vue({
+      el: '#app',
+      data: {
+        apidata: '',
+        appkey: 'c7919894e7942f193f7322bdfcad8e01', // 本来は自分で取得する
+        pref: '兵庫県',
+        callback: 'getJSONP'
+      },
+      methods: {
+        getLibrary: function () {
+          // axiosは使わない
+          let elm = document.createElement('script');
+          elm.charset = 'utf-8';
+          // src属性にブラウザに入力する場合と同じ内容を指定する
+          // 以下はコールバック関数名をgetJSONPにした場合
+          elm.src = 'https://api.calil.jp/library?appkey='+this.appkey+'&pref='+this.pref+'&callback='+this.callback;
+          document.body.appendChild(elm);
+        }
+      }
+    });
+  </script>
+</body>
