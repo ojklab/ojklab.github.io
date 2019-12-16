@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+
+<body>
+  <ul></ul>
+  <script>
+    let ul = document.querySelector('ul');
+    let storage = localStorage;
+    for (let i = 0, len = storage.length; i < len; i += 1) {
+      let k = storage.key(i);
+      let v = storage[k];
+      let li = document.createElement('li');
+      li.textContent = k + ': ' + v;
+      ul.appendChild(li);
+    }
+  </script>
+</body>
+
+</html>
