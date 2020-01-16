@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>プログラミング入門 期末テスト</title>
+  <style>
+    .prettyprint ol.linenums > li {
+      list-style-type: decimal; 
+    }
+    .prettyprint {
+      background-color: #000;
+    }
+  </style>
+</header>
+<body>
+
+ 
+<p>コード06　<a href="./prog-test.html">戻る</a></p>
+<pre class="prettyprint linenums">
+let xpos = [];
+ 
+function setup() {
+  createCanvas(500, 150);
+  noLoop();
+  background(220);
+  strokeWeight(2);
+}
+ 
+function draw() {
+ 
+  for (let i = 1; i <= 4; i += 1) {
+    let rand = Math.floor(Math.random() * 4) + 1;  // 1～4の乱数を生成
+    xpos.push(rand * 100);  // 描画する円のx座標を配列xposに追加
+  }
+ 
+  for (let idx = 0; idx < 4; idx += 1) {
+    circle(/* 問11 */, height / 2, 100 - idx * 20);
+  }
+}
+</pre>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
+</body>
+</html>
