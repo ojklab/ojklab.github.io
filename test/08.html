@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>プログラミング入門 期末テスト</title>
+  <style>
+    .prettyprint ol.linenums > li {
+      list-style-type: decimal; 
+    }
+    .prettyprint {
+      background-color: #000;
+    }
+  </style>
+</header>
+<body>
+
+ 
+<p>コード08　<a href="index.html">戻る</a></p>
+<pre class="prettyprint linenums">
+let x;
+let target;
+
+function setup() {
+  createCanvas(400, 100);
+  x = width / 2;
+  target = x;
+}
+
+function draw() {
+  background(220);
+
+  if (mouseIsPressed) {
+    target = mouseX;
+  }
+
+  if (target - x > 5) {
+    x += 5;
+  } else if (target - x < -5) {
+    x -= 5;
+  } else {
+    x = target;
+  }
+
+  circle(x, height / 2, 50);
+}
+</pre>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
+</body>
+</html>

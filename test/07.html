@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>プログラミング入門 期末テスト</title>
+  <style>
+    .prettyprint ol.linenums > li {
+      list-style-type: decimal; 
+    }
+    .prettyprint {
+      background-color: #000;
+    }
+  </style>
+</header>
+<body>
+
+ 
+<p>コード07　<a href="index.html">戻る</a></p>
+<pre class="prettyprint linenums">
+let dia;
+
+function setup() {
+  createCanvas(255, 255);
+  noStroke();
+  dia = width;
+}
+
+function draw() {
+
+  if (dia < 0) {
+    dia = width;
+  }
+
+  background(255);  
+  
+  fill(dia);
+  circle(width / 2, height / 2, dia);
+
+  dia += -1;
+}
+</pre>
+
+<p style="margin-top:50px;">問14用のコード</p>
+<pre class="prettyprint linenums">
+let dia = 0;
+let vel = 3;
+
+function setup() {
+  createCanvas(255, 255);
+  noStroke();
+}
+
+function draw() {
+
+  if (dia >= width) {
+    vel = -5;
+  } else if (dia <= 0) {
+    vel = 5;
+  }
+
+  background(255);
+  
+  fill(dia);
+  circle(width / 2, height / 2, dia);
+
+  /* 問14（変数diaの更新） */
+}
+</pre>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>プログラミング入門 期末テスト</title>
+  <style>
+    .prettyprint ol.linenums > li {
+      list-style-type: decimal; 
+    }
+    .prettyprint {
+      background-color: #000;
+    }
+  </style>
+</header>
+<body>
+
+ 
+<p>コード10　<a href="index.html">戻る</a></p>
+<pre class="prettyprint linenums">
+let step = 50;
+
+function setup() {
+  createCanvas(500, 100);
+}
+
+function draw() {
+  background(220);
+
+  for (let i = 1; i < 10; i += 1) {
+    if (i % 2 == 0) {
+      myCircle(i, step, false);
+    } else {
+      myCircle(i, step, true);
+      myCircle(i, step / 2, false);
+    }
+  }
+}
+
+function myCircle(pos, dia, isBlue) {
+  if (isBlue) {
+    fill(0, 127, 255);  // 青
+  } else {
+    fill(255, 127, 0);  // 橙
+  }
+  circle(pos * 50, height / 2, dia);
+}
+</pre>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
+</body>
+</html>

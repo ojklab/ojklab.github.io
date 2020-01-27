@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>プログラミング入門 期末テスト</title>
+  <style>
+    .prettyprint ol.linenums > li {
+      list-style-type: decimal; 
+    }
+    .prettyprint {
+      background-color: #000;
+    }
+  </style>
+</header>
+<body>
+
+
+<p>コード02　<a href="index.html">戻る</a></p>
+<pre class="prettyprint linenums">
+let dia = 200;
+let pos = dia / 2;
+
+function setup() {
+  createCanvas(500, 200);
+  background(220);
+  noLoop();
+}
+
+function draw() {
+  circle(pos, height / 2, dia);
+  dia /= 2;
+  pos += dia / 2 * 3;
+  
+  circle(pos, height / 2, dia);
+  dia /= 2;
+  pos += dia / 2 * 3;
+
+  circle(pos, height / 2, dia);
+  dia /= 2;
+  pos += dia / 2 * 3;
+
+  circle(pos, height / 2, dia);
+  dia /= 2;
+  pos += dia / 2 * 3;
+
+  circle(pos, height / 2, dia);
+  dia /= 2;
+  pos += dia / 2 * 3;
+
+  circle(pos, height / 2, dia);
+  dia /= 2;
+  pos += dia / 2 * 3;
+}
+</pre>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
+</body>
+</html>
