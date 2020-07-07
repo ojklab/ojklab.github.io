@@ -26,7 +26,9 @@ h1#mainLogo {
   color: white;
   font-size: 60px;
   text-align: center;
-  border-style: none;
+  border: solid #9de5ff 5px;
+  border-right-style: none;
+  border-left-style: none;
   margin: 0;
   padding-bottom: 20px;
 }
@@ -63,13 +65,13 @@ ul {
   position: relative;
 }
 
-ul li {
+ul li:not(.normal_list) {
   line-height: 1.5;
   padding: 0.5em 0;
   list-style-type: none !important;
 }
 
-ul li:before {
+ul li:not(.normal_list):before {
   /*  font-family: "Font Awesome 5 Free"; */
   /* content: "\f138"; */
   content: "▶";
