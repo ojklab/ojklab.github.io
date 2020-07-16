@@ -1,6 +1,6 @@
 body {
   font-family: 'Kosugi Maru', sans-serif;
-  background-image: url(bg.png);
+  background-image: url("./bg.png");
   box-sizing: border-box;
 }
 
