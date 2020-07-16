@@ -19,7 +19,7 @@ body {
 
 a {
 /*  text-decoration: none;*/
-  color: black;
+  color: #364e96;
 }
 
 h1 {
@@ -87,5 +87,28 @@ ul li:not(.normal_list):before {
   content: "▶";
   position: absolute;
   left: 1em;
+  color: orangered;
+}
+
+dt {
+  margin-top: 1.2em;
+  font-weight: bold
+}
+
+dd {
+  margin-left: 1.8em;
+}
+
+dt::before {
+  content: "Q: ";
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #364e96;
+}
+
+dd::before {
+  content: "A: ";
+  font-size: 1.2em;
+  font-weight: bold;
   color: orangered;
 }
