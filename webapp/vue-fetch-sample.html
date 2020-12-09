@@ -16,7 +16,11 @@
      },
      created: async function() {
        const url = "https://zipcloud.ibsnet.co.jp/api/search?zipcode=7830060";
-       const response = await fetch(url, { mode: 'cors' });
+       const response = await fetch(url, { 
+         headers: new Headers({
+           'Content-Type': 'text/plain'
+         })
+       });
        const jsonData = await response.json();
        this.fetchedData = jsonData;
      }
