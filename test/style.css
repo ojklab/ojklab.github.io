@@ -1,0 +1,17 @@
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+}
+
+.prettyprint ol.linenums > li {
+  list-style-type: decimal;
+}
+
+.prettyprint {
+  background-color: #000;
+}
