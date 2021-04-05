@@ -1,7 +1,13 @@
 body {
-  font-family: 'Kosugi Maru', sans-serif;
-  background-image: url("./bg.png");
+  font-family: "Kosugi Maru", sans-serif;
   box-sizing: border-box;
+}
+
+/* https://www.esz.co.jp/blog/2766.html */
+.bg_dot {
+  background-color: #fff;
+  background-image: radial-gradient(#9de5ff 30%, transparent 30%);
+  background-size: 5px 5px;
 }
 
 #container {
@@ -9,7 +15,7 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
   background-color: white;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
   width: 80%;
   max-width: 800px;
   padding: 1em 3em;
@@ -19,7 +25,7 @@ body {
 }
 
 a {
-/*  text-decoration: none;*/
+  /*  text-decoration: none;*/
   color: #364e96;
 }
 
@@ -32,7 +38,7 @@ h1 {
 }
 
 h1#mainLogo {
-  font-family: 'ZCOOL XiaoWei', serif;
+  font-family: "ZCOOL XiaoWei", serif;
   background-color: #364e96;
   color: white;
   font-size: 60px;
@@ -88,12 +94,12 @@ ul li:not(.normal_list):before {
   content: "▶";
   position: absolute;
   left: 1em;
-  color: orangered;
+  color: #bf783a;
 }
 
 dt {
   margin-top: 1.2em;
-  font-weight: bold
+  font-weight: bold;
 }
 
 dd {
@@ -111,5 +117,5 @@ dd::before {
   content: "A: ";
   font-size: 1.2em;
   font-weight: bold;
-  color: orangered;
+  color: #bf783a;
 }
