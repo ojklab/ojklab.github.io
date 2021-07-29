@@ -53,6 +53,16 @@ h1#mainLogo {
 #top-message {
   color: #364e96;
   font-size: 18px;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  border-left: solid 1ex #9de5ff;
+  border-right: solid 1ex #9de5ff;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+p {
+  margin-top: 2em;
 }
 
 h2 {
@@ -78,12 +88,21 @@ h2:before {
   z-index: -1;
 }
 
+.tag {
+  font-size: smaller;
+  background-color: #364e96;
+  color: #fff;
+  padding: 2px 4px;
+  margin-left: 1ex;
+}
+
 ul {
   position: relative;
+  margin-top: 1ex;
 }
 
 ul li:not(.normal_list) {
-  line-height: 1.5;
+  line-height: 1.3;
   padding: 0.5em 0;
   list-style-type: none !important;
 }
@@ -97,23 +116,41 @@ ul li:not(.normal_list):before {
   color: #bf783a;
 }
 
+.sch {
+  border: solid 1px #364e96;
+  padding: 1em;
+}
+
+.sch dd {
+  margin-left: 1em;
+}
+
+.sch dd::before {
+  content: "◉ ";
+  color: #9de5ff;
+}
+
 dt {
   margin-top: 1.2em;
   font-weight: bold;
 }
 
-dd {
+dt:first-child {
+  margin-top: 0;
+}
+
+.faq dd {
   margin-left: 1.8em;
 }
 
-dt::before {
+.faq dt::before {
   content: "Q: ";
   font-size: 1.2em;
   font-weight: bold;
   color: #364e96;
 }
 
-dd::before {
+.faq dd::before {
   content: "A: ";
   font-size: 1.2em;
   font-weight: bold;
