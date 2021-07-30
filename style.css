@@ -55,10 +55,8 @@ h1#mainLogo {
   font-size: 18px;
   margin-top: 3em;
   margin-bottom: 3em;
-  border-left: solid 1ex #9de5ff;
-  border-right: solid 1ex #9de5ff;
-  padding-left: 1em;
-  padding-right: 1em;
+  border-left: solid 5px #9de5ff;
+  padding-left: 1ex;
 }
 
 p {
@@ -117,17 +115,17 @@ ul li:not(.normal_list):before {
 }
 
 .sch {
-  border: solid 1px #364e96;
-  padding: 1em;
+  padding-left: 1ex;
+  border-left: solid #9de5ff 1px;
 }
 
-.sch dd {
+dd {
   margin-left: 1em;
 }
 
 .sch dd::before {
   content: "◉ ";
-  color: #9de5ff;
+  color: #364e96;
 }
 
 dt {
