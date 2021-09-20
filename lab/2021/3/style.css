@@ -1,0 +1,183 @@
+/*css書く*/
+
+
+/*みさき*/
+
+#nayami1,
+#kaiketsu,
+#kaiketsu1,
+#kaiketsu2 {
+    text-align: center;
+}
+
+#nayami1,
+#kaiketsu1 {
+    font-size: 48px;
+    font-weight: lighter;
+}
+
+#nayami2,
+#kaiketsu2 {
+    font-size: 28px;
+    font-weight: lighter;
+}
+
+.face {
+    width: 35%;
+    height: 35%;
+    float: left;
+    margin: -5em 1.5em;
+}
+
+#kaiketsu {
+    clear: both;
+}
+
+#nayami1 {
+    margin: 60px 0px;
+}
+
+#nayami2 {
+    position: relative;
+    display: inline-block;
+    margin: 50px 60px 0px 60px;
+    padding: 50px 20px;
+    min-width: 120px;
+    max-width: 100%;
+    background: #f4d8c8;
+    border-radius: 50px;
+}
+
+#nayami2:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -80px;
+    margin-top: -20px;
+    border: 15px solid transparent;
+    border-right: 80px solid #f4d8c8;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+}
+
+#kaiketsu2 {
+    background-color: #f4d8c8;
+    width: 1000px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+
+/*くみ*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top {
+    /* width: 1440px; */
+    height: 1024px;
+    background-color: #f7edd9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top img {
+    width: 800px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.share {
+    color: #999999;
+    font-size: 100px;
+}
+
+.tex {
+    font-size: 25px;
+}
+
+
+/*まみ*/
+
+#think {
+    background-color: #73c088;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#think #big {
+    font-size: 38px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#think p {
+    color: white;
+    font-size: 28px;
+    line-height: 2.5;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    margin: 100px 0px;
+}
+
+.step {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.img1 {
+    width: 354px;
+    height: 643px;
+    object-fit: cover;
+}
+
+.img2 {
+    width: 330px;
+    height: 643px;
+    object-fit: cover;
+}
+
+.img3 {
+    width: 349px;
+    height: 643px;
+    object-fit: cover;
+}
+
+.img {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.step div p {
+    margin: 20px 0px;
+    font-size: 18px;
+}
+
+.section4 {
+    margin-bottom: 200px;
+}

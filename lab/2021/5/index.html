@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>HAYAYO｜電話予約代行マッチングアプリ</title>
+  <meta name="description" content="ディスクリプションを入力">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- [if lt IE 9] -->
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <!-- [endif] -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+<header name="header">
+  <nav>
+    <ul>
+  <li><a href="#about">HAYAYOって？</a></li>
+  <li><a href="#how_to_use">使い方ガイド</a></li>
+  <li><a href="#movie">紹介動画</a></li>
+</ul>
+</nav>
+</header>
+
+
+
+
+
+<div class="top ">
+  <div class="top_title">
+  <p>電話予約とネット予約のいいとこ取り。<br>
+    真新しいマッチングサービス。</p>
+  <img src="image/logo.png" alt="ロゴマーク">
+  </div>
+  
+  <img src="image/top.png" alt="TOP画像">
+</div>
+
+
+  <!----- main ----->
+  <main>
+    <div class="link"><a name="about"></a></div>
+  <article class="about effect-fade">
+    <h1><img src="image/logo.png" alt="ロゴマーク">って？</h1>
+    
+    <div class="user">
+    <img src="image/rq_illust.png" alt="リクエスターイメージ">
+    <img src="image/op_illust.png" alt="オペレーターイメージ"> </div> 
+    <p>電話予約が格段に増えたコロナ禍。<br>
+        そこで電話予約が苦手な大学生の一声で生まれたのが<br>
+        この電話予約マッチングアプリ「HAYAYO」。<br><br>
+        
+        泡をモチーフとしたデザインには、<br>
+        "はじけるように素早く"予約が完了するという意味が込められています。<br><br>
+        
+        HAYAYOでは、<br>
+        電話予約代行の依頼をするユーザーを「<span class="rq">Requestor-リクエスター</span>」<br>
+        電話予約代行の依頼を受けるユーザーを「<span class="op">Operator-オペレーター</span>」<br>
+        と呼びます。<br><br>
+        
+        リクエスターとオペレーターを繋いで、<br>
+        リクエスターには「電話をしなくても良い電話予約」を、<br>
+        オペレーターには「手軽にできるお小遣い稼ぎ」を提供します。<br>
+        
+      </p>
+ 
+      <img src="image/figure.png" alt="図">
+
+
+  </article>
+
+
+  <div class="link"><a name="how_to_use"></a></div>
+  <article class="use effect-fade">
+    <h1>使い方ガイド</h1>
+
+    <div class="tab__area">
+    <!-- タブここから -->
+    <ul class="tab__list">
+      <li class="tab__item selected"> <a href="#tab_1" class="js-tab-link selected">Requester</a> </li>
+      <li class="tab__item"> <a href="#tab_2" class="js-tab-link">Operator</a> </li>
+    </ul>
+    <!-- タブここまで -->
+    <!-- コンテンツここから -->
+    <div class="tab__inner js-tab-inner">
+    <div id="tab_1" class="pink js-tab-box">
+
+      <div class="step_block">
+        <img src="image/detail_rq.png">
+        <div class="exp1">
+        <h2>Step1 依頼を投稿</h2>
+        <p>
+          右下のカレンダーアイコンをタップして、
+          必要事項を入力します。
+        </p></div>
+
+      </div>
+
+      <div class="step_block">
+        <img src="image/requester_DM.png">
+        <div class="exp1">
+        <h2>Step2 DMでやりとり</h2>
+        <p>
+          マッチングした相手とはDMでやり取りし、
+          詳細を伝えます。詳細はマッチングが成立
+          すると自動で送信されます。<br></p></div>
+        
+      </div>
+
+      <div class="step_block">
+        <img src="image/Requester.png">
+        <div class="exp1">
+        <h2>Step3 あとは待つだけ</h2>
+        <p>相手が電話をしてくれるのを待ちましょう。
+          マッチングが成立すると、ホーム画面のバブルの色がオレンジ色から水色に変わります。
+        最後に相手の評価をして終了です。</p>
+      </div></div>
+    </div>
+
+
+
+    <div id="tab_2" class="orange js-tab-box">
+
+      <div class="step_block">
+        <img src="image/detail_op.png">
+        <div class="exp2">
+        <h2>Step1 依頼を選択</h2>
+        <p>
+          ホーム画面のバブルの中から、気になった依頼をタップ。<br>
+        内容を見て依頼を受けるか決めます。
+        </p></div>
+
+      </div>
+
+      <div class="step_block">
+        <img src="image/operator_DM.png">
+        <div class="exp2">
+        <h2>Step2 DMでやりとり</h2>
+        <p>
+          マッチングした相手とはDMでやり取りし、
+          以来の詳細を確認します。<br>
+        </p></div>
+
+      </div>
+
+      <div class="step_block">
+        <img src="image/Operator.png">
+        <div class="exp2">
+        <h2>Step3 電話をする</h2>
+        <p>
+          マッチングが成立すると、ホーム画面のバブルの色が水色からオレンジ色に変わります。
+          電話予約を行ったらリクエスターへ連絡しましょう。最後に相手の評価をして終了です。<br>
+        </p></div>
+    </div>
+
+    </div>
+    <!-- コンテンツここまで -->
+    </div>
+</article>
+
+<div class="link"><a name="movie"></a></div>
+<article class="movie effect-fade">
+  <h1>紹介動画</h1>
+
+  <div class="youtube">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/YllaElUgSao" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</article>
+</main>
+  <!----- footer ----->
+  <footer>
+  </footer>
+  <!----- /footer ----->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
