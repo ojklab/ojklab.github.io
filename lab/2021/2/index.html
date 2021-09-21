@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>食材を耳で感じる買い物カゴ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" type="image/png" href="image/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="image/icon-192x192.png">
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $(window).on('load scroll', function() {
+                var winScroll = $(window).scrollTop();
+                var winHeight = $(window).height();
+                var scrollPos = winScroll + (winHeight * 0.8);
+
+                $(".show").each(function() {
+                    if ($(this).offset().top < scrollPos) {
+                        $(this).css({
+                            opacity: 1,
+                            transform: 'translate(0, 0)'
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <header id="index">
+        <h1 class="fade-in-bottom">耳で味わう<span>tasty!!</span></h1>
+        <div>
+            <img src="image/top_shopping.png" alt="買い物の様子" class="top_shopping">
+            <div class="tag_trans"><a href="#insight">
+                    <div class="top_circle"></div>
+                    <img src="image/top_tag.png" width="146" class="top_tag">
+                    <div class="top_circleline"></div>
+                </a></div>
+            <p class="question">？</p>
+            <div class="sns_share">
+                <p>SNSでシェアする</p>
+                <a href="https://twitter.com/intent/tweet?text=%E8%80%B3%E3%81%A7%E5%91%B3%E3%82%8F%E3%81%86tasty%21%21%E8%B2%B7%E3%81%84%E7%89%A9%C3%97%E9%A3%9F%E6%9D%90%E9%9F%B3%E3%81%A7%E6%A5%BD%E3%81%97%E3%82%80%E3%82%BF%E3%82%B0+https%3A%2F%2Fyuria-ugok.github.io/tasty-tag%2F" target="_blank" rel="nofollow noopener noreferrer"><img src="image/twitter-fill.svg" class="twitter"></a>
+                <a href="http://www.facebook.com/sharer/sharer.php?u=https://yuria-ugok.github.io/tasty-tag/" target="_blank" rel="nofollow noopener noreferrer"><img src="image/facebook-circle-fill.svg" class="facebook"></a>
+                <a href="https://social-plugins.line.me/lineit/share?url=https://yuria-ugok.github.io/tasty-tag/" target="_blank" rel="nofollow noopener noreferrer"><img src="image/line-fill.svg" class="line"></a>
+            </div>
+            <p class="scroll">Scroll</p>
+        </div>
+        <div class="top_line"></div>
+        <a id="insight"></a>
+    </header>
+
+    <main>
+        <section class="insight slide-bottom show">
+            <div>
+                <img src="image/circle_shopping.png">
+                <h2>買い物</h2>
+            </div>
+            <div class="multiply1"></div>
+            <div class="multiply2"></div>
+            <div>
+                <h2>食材音</h2>
+                <img src="image/circle_sound.png">
+            </div>
+        </section>
+
+        <section class="message">
+            <img src="image/tag_prototype.jpg">
+            <div class="slide-bottom show">
+                <h2>新しい買い物空間を</h2>
+                <p>外出自粛が求められる世の中で、唯一の外出ともいえる<br>｢スーパーでの買い物｣を充実させる、全ての人が楽しむ<br>ことのできる新しい買い物空間を提供します。</p>
+                <p>今の買い物カゴにタグを付けるだけ。<br>視覚以外でも、買い物を楽しもう。</p>
+            </div>
+        </section>
+
+        <section class="story">
+            <h2>ストーリー</h2>
+            <div>
+                <div class="story_exp slide-bottom show">
+                    <h3>01</h3>
+                    <p>コロナ禍で、買い物中ものに触れづらい今、触って確かめる<br>視覚障害者の方々は、とくに気を使うことが多い。</p>
+                </div>
+                <div class="story_line"></div>
+                <div class="story_exp slide-bottom show">
+                    <h3>02</h3>
+                    <p>今いる商品コーナーがわかるだけでなく、<br>視覚以外で買い物を楽しめるようにしたい。</p>
+                </div>
+                <div class="story_line"></div>
+                <div class="story_exp slide-bottom show">
+                    <h3>03</h3>
+                    <p>｢ジュージュー｣や｢シュワシュワ｣という<br>食材に沿った、臨場感のある “音” で知らせよう。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="service">
+            <h2>サービスの仕組み</h2>
+            <div class="how_service">
+                <div class="step01 slide-left show">
+                    <h3>STEP <span>01</span></h3>
+                    <img src="image/mock-up_PC.png" width="205" height="174" class="mock-up_pc">
+                    <img src="image/mock-up_tablet.png" width="122" height="92" class="mock-up_tab">
+                    <h4>音を<span>決</span>める</h4>
+                    <p>アプリでビーコンに音を設定します。<br>新たな音源のアップロードも可能です。</p>
+                </div>
+                <div class="step02 slide-left show">
+                    <h3>STEP <span>02</span></h3>
+                    <img src="image/beacon.png" width="143" height="143" class="beacon">
+                    <h4>音を<span>送</span>る</h4>
+                    <p>各売り場に1つビーコンを設置します。<br>近くのタグへ音を送信する役割です。</p>
+                </div>
+                <div class="step03 slide-left show">
+                    <h3>STEP <span>03</span></h3>
+                    <img src="image/basket.png" width="259" class="basket">
+                    <div>
+                        <div class="service_circle"></div>
+                        <img src="image/tag_sound.png" width="104" class="tag_sound">
+                        <div class="service_round1"></div>
+                        <div class="service_round2"></div>
+                    </div>
+                    <h4>音が<span>流</span>れる</h4>
+                    <p>タグから半径50cmの範囲で音が流れ、<br>売り場を跨ぐと自動的に音が切り替わります。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="pv">
+            <h2>＼耳で味わうtasty!!／</h2>
+            <video src="image/PV.mp4" controls muted autoplay playsinline loop width="66.7%">動画が再生できません。</video>
+        </section>
+
+        <section class="lineup">
+            <h2>皆で楽しめるカラー</h2>
+            <div class="lineup_color">
+                <div class="default">
+                    <img src="image/tag_default.png" width="188" height="286" class="tag_def">
+                    <img src="image/tag_default_back.png" width="182" height="286" class="tag_def_back">
+                </div>
+                <div class="color slide-left show">
+                    <img src="image/tag_red.png" width="119" height="182" class="tag_red">
+                    <img src="image/tag_yellow.png" width="114" height="173" class="tag_yellow">
+                    <img src="image/tag_blue.png" width="118" height="176" class="tag_blue">
+                    <img src="image/tag_green.png" width="116" height="184" class="tag_green">
+                </div>
+                <div class="lineup_exp">
+                    <p>耳で感じることを意識したデザインです。<br>カラフルな5色展開。お子様も一緒に楽しめます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2><a href="contact.html">お問い合わせ</a></h2>
+        </section>
+    </main>
+
+    <div id="page_top"><a href=""></a></div>
+
+    <footer>
+        <img src="image/footer.png" width="77.4%">
+        <p>＠抹茶ラテ2021</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title>食材を耳で感じる買い物カゴ | お問い合わせ</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" type="image/png" href="image/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="image/icon-192x192.png">
+</head>
+
+<body>
+    <header class="contact_head">
+        <h1>お問い合わせ</h1>
+    </header>
+
+    <main>
+        <section class="contact_form">
+            <form>
+                <div class="name">
+                    <div>
+                        <label>お名前</label>
+                        <span>必須</span>
+                        <input type="text" class="input_text" name="name" autocomplete="name" required>
+                    </div>
+                    <p>例）山田 太郎</p>
+                </div>
+                <div class="companyname">
+                    <div>
+                        <label>会社名</label>
+                        <span class="optional">任意</span>
+                        <input type="text" class="input_text" name="companyname" autocomplete="organization">
+                    </div>
+                    <p>例）株式会社tasty</p>
+                </div>
+                <div class="email">
+                    <div>
+                        <label>メールアドレス</label>
+                        <span>必須</span>
+                        <input type="email" class="input_text" name="email" autocomplete="email" required>
+                    </div>
+                    <p>例）tasty@xxx.com</p>
+                </div>
+                <div id="message">
+                    <label>お問い合わせ内容</label>
+                    <span>必須</span>
+                    <textarea type="textarea" class="input_text" name="message" required></textarea>
+                </div>
+                <div class="submit">
+                    <button type="submit" name="submit" value="send">入力内容を送信する</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <div id="page_top"><a href=""></a></div>
+
+    <footer>
+        <img src="image/footer.png" width="77.4%">
+        <p>＠抹茶ラテ2021</p>
+    </footer>
+
+</body>
+
+</html>
