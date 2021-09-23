@@ -1,0 +1,279 @@
+@charset "UTF-8";
+
+/*　共通部分
+------------------------------*/
+html{
+    font-size: 100%
+}
+
+body{
+    line-height: 1.9;
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+nav{
+    letter-spacing: 2px;
+}
+
+h2{
+    font-size: 1.5rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    text-align: center;   
+    margin-top: 10%;
+    margin-bottom: 2%;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*　header
+------------------------------*/
+.logo{
+    width:30%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5%;
+    margin-left: -5%;
+}
+
+.max{
+    max-width: 1100px;
+}
+
+.main-nav{
+    display: flex;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    margin-top: 33%;
+    list-style: none;
+}
+
+.main-nav a{
+    margin-left: 15%;
+}
+
+.main-nav li{
+    color:black;
+}
+
+.main-nav li:hover{
+    transform:translateY(-8px);
+    transition-duration: 0.7s;
+}
+
+
+/*　top
+------------------------------*/
+.top{
+    display: flex;
+    justify-content: space-around;
+    margin:0 10%;
+}
+
+.topimg{
+    background-size:contein;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hand{
+    width:80%;
+    margin-left: 10%;
+}
+
+.top p{
+    font-size: 1rem;
+}
+
+/*　本文
+------------------------------*/
+
+.about{
+    display: flex;
+    justify-content: center;
+}
+
+.about img{
+    width:30%;
+}
+
+.about p{
+    margin-top: 10%;
+}
+
+.about2{
+    display: flex;
+    justify-content: center;
+}
+
+.about2 img{
+    width:30%;
+}
+
+.about2 p{
+    margin-top: 10%;
+}
+
+input{
+    border:solid;
+    border-width: 1px;
+    margin-bottom: 3%;
+}
+
+input:hover{
+    background-color: lightgrey;
+}
+
+.center{
+    text-align: center;
+}
+
+textarea{
+    border:solid;
+    border-width: 1px;
+}
+
+textarea:hover{
+    background-color: lightgrey;
+}
+
+.submit{
+    margin-top: 2%;
+    width:10%;
+}
+
+.submit:hover{
+    background-color: black;
+    color:white;
+}
+
+
+/* pagetop button
+------------------------------*/
+.page-top img{
+    width: 60px;
+    margin:100px 0 0 80%;
+}
+
+.page-top img:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+
+/* footer
+------------------------------*/
+.footer{
+    text-align: center;
+    margin-top:15%;
+    margin-bottom: 5%;
+    font-size: 1.2rem;
+}
+
+/*モバイル版
+--------------------------------*/
+
+@media(max-width:600px){
+
+    /*共通部分*/
+    h2{
+        font-size: 1.3rem;
+    }
+
+    p{
+        font-size: 0.8rem;
+    }
+
+    /*header*/
+    .header{
+        display:block;
+        text-align: center;
+    }
+
+    .logo{
+        width:80%;
+    }
+
+    .main-nav{
+        font-size: 1.2rem;
+        justify-content: space-around;
+        margin:5% 17% 0 17%;
+    }
+
+    .main-nav a{
+        margin-left: 5%;
+    }
+
+/*　top */
+.top{
+    display: block;
+    margin: 15% 0 0 0;
+    text-align: center;
+}
+
+.top p{
+    font-size: 0.8rem;
+}
+
+.hand{
+    width:80%;
+    margin-left: 0%;
+    margin-top:10%;
+}
+
+/*　main */
+
+.about{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12%;
+}
+
+.about img{
+    width:35%;
+    object-fit: contain;
+}
+
+.about p{
+    margin-top: 10%;
+    font-size: 0.4rem;
+    width:50%;
+    margin:0 7%;
+}
+
+.about2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.about2 img{
+    width:35%;
+    object-fit: contain;
+}
+
+.about2 p{
+    margin-top: 10%;
+    font-size: 0.4rem;
+    width:50%;
+    margin:0 7%;
+}
+
+/*　contact */
+.submit{
+    margin-top: 4%;
+    width:20%;
+}
+
+}

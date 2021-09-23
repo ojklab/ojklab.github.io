@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>relie-hue</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Webfont -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="image/favicon.png">
+
+    <!-- jQuery.jsの読み込み -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+<!-- スムーズスクロール部分の記述 -->
+<script>
+$(function(){
+   // #で始まるアンカーをクリックした場合に処理
+   $('a[href^=#]').click(function() {
+      // スクロールの速度
+      var speed = 400; // ミリ秒
+      // アンカーの値取得
+      var href= $(this).attr("href");
+      // 移動先を取得
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      // 移動先を数値で取得
+      var position = target.offset().top;
+      // スムーススクロール
+      $('body,html').animate({scrollTop:position}, speed, 'swing');
+      return false;
+   });
+});
+</script>
+</head>
+
+
+<body id="home">
+
+    <!--　　↓ヘッダー　　-->
+    <header class="header max">
+        <img src="image/logo.png" class="logo">
+        <!-- <h1>relie-hue</h1> -->
+        <nav>
+            <ul class="main-nav">
+                <a href=#top><li>top</li></a>
+                <a href=#about><li>about</li></a>
+                <a href=#contact><li>contact</li></a>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--　　↓トップ　　-->
+
+    <div id="top" class="top">
+
+    <div>
+    <h2 class="catch">いつ、どこでも<br>体温計測を気軽に</h2>
+    <br>    
+    <p>友人に会うとき。外食に行くとき。<br>少し体調が悪いとき。
+        <br>ふと今の自分の体温が<br>気になったことはありませんか？<br><br>
+        そんなあなたに、<br>継続的な体温管理で安心をお届けします。</p>
+    </div>
+
+
+    <div class="topimg">
+    <img src="image/hand.jpg" class="hand">
+    </div>
+
+</div>
+    
+
+    <!--　　↓本文　　-->
+
+    <div id="about">
+    <h3>about</h3>
+
+        <div class="about">
+            <img src="image/shopping.jpg">
+    <P>relie-hueは体温計測ができるラバーバンドです。<br>専用読み取り機にかざすだけで計測された体温が店舗に送信されるため、
+        <br>店舗で体温を測る必要がなく、<br>ICカードで改札に入るようにスマートに入店することができます。</P><br>
+    </div>
+
+    <div class="about2">
+        <p>新型コロナの感染対策で入店時に体温を計らなければいけないお店が増え、<br>体温計測のたびに足を止めています。<br>
+
+        relie-hueは、そのちょっとしたストレスをなくすことを目的としています。</p><br>
+        <img src="image/mask.jpg">
+    </div>
+
+    <div class="about">
+        <img src="image/teatime.jpg">
+        <p>スマートフォンアプリと連携させることで１日の体温変化を確認することができます。<br>
+        ラバーバンド型なので幼い子どもにも使いやすく、<br>出かける前の体温計測をつい忘れてしまう方にも便利な仕様となっています。<br>
+
+        relie-hueは体温計測の煩わしさをなくし、日々の生活に安心を与えます。
+    </P>
+
+</div>
+</div>
+
+<div id="contact">
+    <h3>contact</h3>
+
+    <div class="center">
+    name<br><input type="text" ><br>
+    email address<br><input type="email"><br>
+    message<br><textarea name="message"></textarea><br>
+    <input type="submit" value="submit" class="submit">
+</div>
+</div>
+
+
+<!-- ページ上部へ戻るボタン -->
+<div class="page-top">
+    <a href ="#home"><image src="image/pagetop.jpg"></image></a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+        <p><small>&copy; 2021 4班</small></p>
+        </div>
+    </footer>
+</body>
+
+</html>
