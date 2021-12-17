@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<header>
+  <title>プログラミング入門 期末テスト</title>
+  <link rel="stylesheet" href="style.css">
+</header>
+<body>
+
+ 
+<p>コード03　<a href="index.html">戻る</a></p>
+<pre class="prettyprint linenums">
+let x = 200;
+
+function setup() {
+  createCanvas(400, 100);
+  background(220);
+  noLoop();
+}
+
+function draw() {
+  line(width / 2, 0, width / 2, width);
+
+  strokeWeight(5);
+  stroke(0, 128, 255); // 青
+
+  fill(255); // 白
+  if (x + 50 >= width / 2) {
+    fill(255, 128, 0); // 橙
+  }
+
+  square(x, 25, 50);
+}
+</pre>
+
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
+<script>document.oncontextmenu = () => false</script>
+</body>
+</html>
