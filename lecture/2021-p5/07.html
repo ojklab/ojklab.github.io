@@ -4,11 +4,12 @@
   <title>プログラミング入門 期末テスト</title>
   <link rel="stylesheet" href="style.css">
 </header>
+
 <body>
 
- 
-<p>コード07　<a href="index.html">戻る</a></p>
-<pre class="prettyprint linenums">
+
+  <p>コード07　<a href="index.html">戻る</a></p>
+  <pre class="prettyprint linenums">
 let dia;
 
 function setup() {
@@ -32,10 +33,10 @@ function draw() {
 }
 </pre>
 
-<p style="margin-top:50px;">問14用のコード</p>
-<pre class="prettyprint linenums">
+  <p style="margin-top:50px;">問14用のコード</p>
+  <pre class="prettyprint linenums">
 let dia = 0;
-let vel = 3;
+let vel = 5; // 直径が大きくなる速度
 
 function setup() {
   createCanvas(255, 255);
@@ -45,8 +46,10 @@ function setup() {
 function draw() {
 
   if (dia >= width) {
+    // 直径がwidth以上になろうとしたら速度の符号を反転する
     vel = -5;
   } else if (dia <= 0) {
+    // 直径が0以下になろうとしたら速度の符号を反転する
     vel = 5;
   }
 
@@ -59,7 +62,8 @@ function draw() {
 }
 </pre>
 
-<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
-<script>document.oncontextmenu = () => false</script>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?skin=sunburst"></script>
+  <script>document.oncontextmenu = () => false</script>
 </body>
+
 </html>
