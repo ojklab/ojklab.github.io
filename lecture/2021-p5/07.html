@@ -45,12 +45,9 @@ function setup() {
 
 function draw() {
 
+  // 直径がwidth以上になろうとしたら速度の符号を反転する
   if (dia >= width) {
-    // 直径がwidth以上になろうとしたら速度の符号を反転する
     vel = -5;
-  } else if (dia <= 0) {
-    // 直径が0以下になろうとしたら速度の符号を反転する
-    vel = 5;
   }
 
   background(255);
