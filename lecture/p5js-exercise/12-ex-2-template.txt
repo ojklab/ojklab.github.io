@@ -1,0 +1,43 @@
+const R = 20;     // 円の半径
+const NUM = 100;  // 描画する図形の個数（変化させてみよう）
+
+function setup() {
+  createCanvas(600, 400);
+  frameRate(1);
+}
+
+function draw() {
+  background(220);
+
+  let count = 0;  // はみ出した回数をカウントする変数
+  
+  for (/* NUM回繰り返す */) {
+    let x = random(0, 1) * width;
+    let y = random(0, 1) * height;
+    // 図形を描画する関数を呼び出し、はみ出した回数を加算する
+  }
+
+  drawAverage();  // はみ出た回数を引数に与える
+}
+
+/* 図形を描画する関数（ここを改変する） */
+// 戻り値：図形がはみ出したら1、そうでなければ0を返す
+function drawShape(x, y) {
+  fill(0, 127, 255);
+  square(x - R, y - R, R * 2);
+  fill(255, 127, 0);
+  circle(x, y, R * 2);
+}
+
+/* 割合を計算して左上に表示する関数（この関数は修正する必要なし） */
+function drawAverage(cnt) {
+  let avg = floor(cnt / NUM * 100) + '%';
+  let size = 32;
+
+  fill(255);
+  rect(0, 0, size * 3 - 8, size + 8);
+  textSize(size);
+  fill(0);
+  textAlign(RIGHT);
+  text(avg, size * 3 - 16, size); // nfcは表示桁を調整する
+}

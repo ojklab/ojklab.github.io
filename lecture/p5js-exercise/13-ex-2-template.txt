@@ -1,0 +1,44 @@
+const DIA = 50; // 円の直径
+
+/* クラス定義 */
+/* */ {
+
+  // コンストラクタの定義（引数は初期位置）
+
+  // 上下左右に図形を移動させるメソッドの定義
+
+  // 図形を描画するメソッドの定義（上記の四つのメソッドからも呼び出される）
+}
+
+
+/* ここから本体 */
+
+// インスタンス変数の宣言
+
+function setup() {
+  createCanvas(500, 500);
+  textAlign(CENTER, CENTER);
+  background(220);
+  
+  // インスタンスの生成
+  // 図形を初期位置に描画
+}
+
+function draw() {
+  if (keyIsPressed) {
+    if (key == 'ArrowUp') {
+      /* */
+    } else if (key == 'ArrowDown') {
+      /* */
+    } else if (key == 'ArrowRight') {
+      /* */
+    } else if (key == 'ArrowLeft') {
+      /* */
+    } else if (key == 'Shift') {
+      fill(0);
+      noStroke();
+      text(/* */, width / 2, height / 2);  // 座標の描画
+      keyIsPressed = false;
+    }
+  }
+}

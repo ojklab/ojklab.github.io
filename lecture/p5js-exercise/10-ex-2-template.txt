@@ -1,0 +1,42 @@
+let flag = false;  // 'r'キーを押したときに小円の色を反転するために利用
+ 
+function setup() {
+  createCanvas(500, 500);
+  background(220);
+}
+
+function draw() {
+  // マウスボタンが押されたらmyCircleもしくはmySquareを呼ぶ
+  
+  if (keyIsPressed) {
+    // rキーが押されたらflagの値を反転させて画面をリセット
+    
+    // ↓のコードがないとキーを1回押したつもりでも何度も入力されてしまう
+    keyIsPressed = false;
+  }
+}
+
+/* 円スタンプを描画 */
+function myCircle() {
+  // 円の描画
+
+  // flagの状態によって小円の色を選択＆描画
+}
+
+/* 正方形スタンプを描画 */
+function mySquare() {
+  // 正方形の描画
+
+  // flagの状態によって小円の色を選択＆描画
+}
+
+/* スタンプ中央の橙色の小円を描画 */
+function orangeCircle() {}
+
+/* スタンプ中央の青色の小円を描画 */
+function blueCircle() {}
+
+// 左クリック時にコンテキストメニューを表示させないおまじない
+document.oncontextmenu = (e) => {
+  e.preventDefault();
+}

@@ -1,0 +1,20 @@
+function setup() {
+  createCanvas(500, 500);
+  background(220);
+}
+
+function draw() {
+  let x_side = 100;
+  let y_side =  60;
+  
+  if (mouseIsPressed) {
+    let x = mouseX;
+    let y = mouseY;
+    rect(chPos(/*引数*/), chPos(/*引数*/), x_side, y_side);
+  }
+}
+
+/* 修正した位置を返す関数 */
+function chPos(pos, side) {
+  // このなかで直接 mouseX mouseY は使用しないこと
+}

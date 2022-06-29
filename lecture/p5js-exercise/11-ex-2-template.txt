@@ -1,0 +1,41 @@
+let col = [];  // 信号機のライトの色
+let cnt = 0;   // 点灯の切り替えに利用せよ
+
+function setup() {
+  createCanvas(600, 300);
+  
+  // 信号機のライトの色の設定
+  col.push(color(195, 63, 0));
+  col.push(color(195, 195, 0));
+  col.push(color(0, 127, 195));
+}
+
+function draw() {
+  background(50);
+
+  // 信号機と反射光の描画
+
+  if (keyIsPressed) {
+    // 点灯位置の切り替え（ヒント：ここでは反射光は描画しない）
+    keyIsPressed = false;
+  }
+}
+
+// 信号機
+function trafficLight() {
+  noStroke();
+  fill(255);
+  circle(150, height / 2, 200);
+  circle(450, height / 2, 200);
+  rect(150, 50, 300, 200);
+  
+  // ここでlight関数を呼んで3色のライトを描画する
+}
+
+// 信号機のライト
+function light() {
+}
+
+// 信号機の点灯を表現する反射光
+function reflect() {
+}

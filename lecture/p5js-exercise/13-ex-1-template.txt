@@ -1,0 +1,33 @@
+const DIA = 40;  // 円の直径
+
+function setup() {
+  createCanvas(DIA * 10, DIA * 6);
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  noStroke();
+  background(220);
+}
+
+function draw() {
+  let day = /* Dateクラスのインスタンスを生成 */;
+  let sec = /* 現在時刻の秒数を取得 */;
+
+  /* 0秒のときにそれまで描画した円をすべて削除（最後にトライ） */
+
+  let col = /* 列番号 */;
+  let row = /* 行番号 */;
+  
+  drawClock(/* */);
+}
+
+// 円と秒数を描画する関数（中身は修正しなくてよい）
+function drawClock(c, r, s) {
+  let x = c * DIA + DIA / 2;
+  let y = r * DIA + DIA / 2;
+
+  fill(255, 127, 0);
+  circle(x, y, DIA);
+
+  fill(255);
+  text(s, x, y);
+}

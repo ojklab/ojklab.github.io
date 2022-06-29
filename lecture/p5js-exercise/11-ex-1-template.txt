@@ -1,0 +1,21 @@
+const W = 20; // 円の直径 = 正方形の一辺の長さ
+const HW = W / 2;
+
+function setup() {
+  createCanvas(600, 100);
+}
+
+function draw() {
+  background(220);
+
+  for () {
+    // if文で条件分岐しながら関数呼び出し
+  }
+}
+
+// この関数は大きい円と小さい円のどちらにも使用する
+function orangeCircle(/*引数2個*/) {
+}
+
+function blueSquare(/*引数1個*/) {
+}
