@@ -124,6 +124,7 @@ dd {
 }
 
 .sch dd::before {
+  font-size: small;
   content: "◉ ";
   color: #364e96;
 }
