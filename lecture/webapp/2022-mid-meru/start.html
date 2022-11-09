@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-ex-2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg2" :style="bg_color">
+    <!-- class属性とstyle属性にゲッターをバインドする -->
+
+    <a href="#hairsaron" class="shopImg" @click="hairStyle"><img src="./image/hair.png" alt="icon" /></a>
+    <a href="#apareru" class="shopImg" @click="apareruStyle"><img src="./image/apareru.png" alt="icon" /></a>
+    <a href="#photo" class="shopImg" @click="photoStyle"><img src="./image/photo.png" alt="icon" /></a>
+  
+    <div class="bg_start">
+    <section class="apareru_bg">
+    <h1 class="daimei" id="hairsaron">ヘアサロンへようこそ！</h1>
+    <div class="secthion">
+      <h2>髪型は？</h2>
+      <div class="radiobox">
+        <!-- radioboxの消し方はネット参照 -->
+        
+          <input
+          id="radio1"
+            type="radio"
+            name="hair"
+            v-model="box"
+            value="twin"
+            class="radiobutton"
+          /><label for="radio1"class="label_r">ツイン団子</label
+        >
+       
+          <input
+          id="radio2"
+            type="radio"
+            name="hair"
+            v-model="box"
+            value="harf"
+            class="radiobutton"
+          /> <label for="radio2" class="label_r">ハーフアップ</label
+        >
+       
+   
+      
+          <input
+          id="radio4"
+            type="radio"
+            name="hair"
+            v-model="box"
+            value="short"
+            class="radiobutton"
+          />  <label for="radio4"class="label_r">ショート</label
+        >
+      </div>
+    </div>
+
+    <img :src="hair_style" alt="hair" />
+    <br>
+    <a href="#hair_color" class="back_btnG" >Next→</a>
+
+    
+    <div class="secthion_color">
+      <h2 id="hair_color">髪色は？</h2>
+      <label class="accented">
+
+      <div class="flex">
+        <div>
+          <div class="src"></div>
+       
+          <label for="">
+            <input
+              type="radio"
+              name="color"
+              v-model="c_box"
+              value="white"
+            />白</label
+          >
+        </div>
+
+        <div>
+          <div class="src2"></div>
+          <label for="">
+            <input
+              type="radio"
+              name="color"
+              v-model="c_box"
+              value="blue"
+            />水色</label
+          >
+        </div>
+
+        <div>
+          <div class="src3"></div>
+          <label for="">
+            <input
+              type="radio"
+              name="color"
+              v-model="c_box"
+              value="black"
+            />黒</label
+          >
+        </div>
+        <div>
+          <div class="src4"></div>
+          <label for="">
+            <input
+              type="radio"
+              name="color"
+              v-model="c_box"
+              value="pink"
+            />ピンク</label
+          >
+        </div>
+        <img :src="hair_color" alt="c_hair" />
+      </div>
+    </div>
+  </label>
+    <!-- <p>{{abc}}</p> -->
+
+    
+    <a href="#" class="back_btnG" @click = "startStyle" >←back</a>
+
+    </section>
+
+<section class="apareru_bg">
+    <h1 class="daimei" id="apareru">アパレルショップへようこそ！</h1>
+    <div>
+    <div class="secthion">
+      <h2>服装は？</h2>
+      <select v-model="fashion"  class="downStyle"  >
+        <option selected disabled value="">服装は？</option>
+        <option value="pa-ka-">パーカー</option>
+    
+        <option value="meido">ジャージメイド</option>
+        <option value="se-ra-">セーラー</option>
+        <option value="se-ta-">セーター</option>
+      </select>
+      <input type="checkbox" v-model="food_check" :style="myStyle"> {{food}}
+    
+    </div>
+ 
+    <!-- <img :src="hair_style" alt="" /> -->
+
+    <!-- <p>{{abc}}</p> -->
+    <img :src="fashion_style" alt="" />
+    
+    <div class="btn_potition">
+      
+    <a href="#" class="back_btnB"  @click = "startStyle">←back</a>
+  </div>
+  </section>
+
+  <section class="apareru_bg">
+  <h1 class="photo_sec" id="photo">フォトスタジオへようこそ！</h1>
+  <div>
+  <div class="secthion">
+    <h3>遊んでくれてありがとう！   <br />色んな種類があるからまた遊んでね！ </h3>
+<div>
+  <img src="./image/ty.jpg" alt="">
+<!-- <img :src="fashion_style" alt=""> -->
+</div>
+  <!-- <img :src="hair_style" alt="" /> -->
+
+  <!-- <p>{{abc}}</p> -->
+<a href="#kansei" class="kansei_link">完成したお写真はこちら↓</a>
+
+  <div class="secthion_kansei">
+  <img :src="a_style" alt="" id="kansei" :style="border_style" />
+  <a href="home.html" class="back_btnY">finish→</a>
+  <br />
+  <br />
+  <br />
+  </div>
+</section>
+</div>
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

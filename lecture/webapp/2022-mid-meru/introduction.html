@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-ex-2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg1">
+    <!-- class属性とstyle属性にゲッターをバインドする -->
+    <div class="second_pg">
+      <img src="./image/merumo_box.png" alt="" id="box" @click="secret_text" />
+
+      <p class="s_text">{{se_text}}</p>
+      <p class="i_text">{{in_text}} <br />{{in_text2}}</p>
+      <button @click="change_text" class="text_btn" :style="kesu">
+        {{yazirusi}}
+      </button>
+    </div>
+    <a :href="home_url" class="next_pg">{{start_pg}}</a>
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

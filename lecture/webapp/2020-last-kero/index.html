@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>ウェブアプリケーション設計演習</title>
+</head>
+
+<body>
+  <!-- HTML -->
+  <div id="app">
+    <audio id="right" preload>
+      <source src="mp3/right.mp3" type="audio/mp3">
+    </audio>
+    <audio id="miss" preload>
+      <source src="mp3/miss.mp3" type="audio/mp3">
+    </audio>
+    <audio id="hover" preload>
+      <source src="mp3/button.mp3" type="audio/mp3">
+    </audio>
+    <audio id="oh" preload>
+      <source src="mp3/oh.mp3" type="audio/mp3">
+    </audio>
+    <audio id="kaka" preload>
+      <source src="mp3/kaka.mp3" type="audio/mp3">
+    </audio>
+    <div class="display">
+      <div class="back" v-bind:id="sound">
+      </div>
+      <div class="audio" v-bind:id="sound">
+        <p>音を使用しています 鳴らしますか？</p>
+        <button @click="on"><img src="img/on.png">
+          <p>はい</p>
+        </button>
+        <button @click="off"><img src="img/off.png">
+          <p>いいえ</p>
+        </button>
+      </div>
+
+      <div class="game">
+        <div class="q">
+          <div v-bind:id="top" class="top">
+            <img src="img/sushilogo.png">
+            <button @click="gameStart" @mouseenter="hover">ゲームスタート</button><br>
+            <button @click="goHow" @mouseenter="hover">遊び方</button>
+          </div>
+
+          <div v-bind:id="how" class="how">
+            <h2>遊び方</h2>
+            <img src="img/how.png">
+            <button @click="backTop" @mouseenter="hover">もどる</button>
+          </div>
+
+          <div v-bind:id="quiz">
+            <h2>第{{num}}問</h2>
+            <div class="kanji">
+              {{kanji}}
+            </div>
+
+            <div class="answer">
+              <button @click="btn1()" v-bind:id="light1">
+                {{button1}}
+              </button>
+              <button @click="btn2()" v-bind:id="light2">
+                {{button2}}
+              </button>
+              <button @click="btn3()" v-bind:id="light3">
+                {{button3}}
+              </button>
+              <button @click="btn4()" v-bind:id="light4">
+                {{button4}}
+              </button>
+            </div>
+          </div>
+          <div v-bind:id="score">
+            <h2 v-bind:id="scoreH">得点</h2>
+            <div class="score">
+              <div class="low" v-bind:id="scoreLow">
+                <img src="img/greendish.png">
+                <p>{{lowDish}}</p>
+              </div>
+              <div class="high" v-bind:id="scoreHigh">
+                <img src="img/blackdish.png">
+                <p>{{highDish}}</p>
+              </div>
+              <p class="allscore" v-bind:id="scoreAll">
+                {{allScore}}
+              </p>
+              <button @click="repeat" @mouseenter="hover" v-bind:id="scoreRe">
+                トップに戻る
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <img src="img/table.png">
+
+        <div class="lanes">
+          <img src="img/lane.png">
+          <img src="img/lane.png">
+        </div>
+
+        <div class="sushi">
+          <img v-bind:src="sushi" v-bind:id="sushiId">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="js/js.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Serif+JP:wght@600&display=swap');
+
+body {
+  background-color: #222;
+  padding: 0;
+  margin: 0;
+}
+
+.display {
+  background-color: antiquewhite;
+  font-family: 'M PLUS 1p', sans-serif;
+  width: 800px;
+  height: 800px;
+  margin: 10% auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.audio {
+  text-align: center;
+  z-index: 20;
+  width: 350px;
+  height: 150px;
+  background-color: #222;
+  border: solid 10px #e6b422;
+  border-radius: 30px;
+  padding: 10px;
+  position: absolute;
+  top: 40%;
+  left: 26%;
+}
+
+.audio p {
+  color: #fff9fe;
+  font-size: 20px;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.audio button {
+  width: 35%;
+  height: 35px;
+  background-color: #fff9fe;
+  position: relative;
+}
+
+.audio button p {
+  width: 70px;
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #19448e;
+  font-size: 18px;
+  position: absolute;
+  top: -17px;
+  left: 45px;
+}
+
+.audio button img {
+  position: absolute;
+  left: 18px;
+  top: 1px;
+  width: 30px;
+}
+
+.back {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  z-index: 10;
+  position: absolute;
+}
+
+.game img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#start {
+  display: block;
+}
+
+#end {
+  display: none;
+}
+
+.q {
+  margin: 3% auto;
+  padding: 5px;
+  width: 650px;
+  height: 370px;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 50px;
+  color: #fff;
+  position: relative;
+}
+
+.q h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.top {
+  width: 100%;
+  position: relative;
+}
+
+.top img {
+  width: 70%;
+  position: absolute;
+  top: 20px;
+  left: 100px;
+}
+
+.top button {
+  margin: 240px 0 0 230px;
+  width: 200px;
+  height: 40px;
+  font-size: 23px;
+  background-color: #cd5e3c;
+}
+
+.top button:last-child {
+  margin-top: 20px;
+  background-color: #7a4171;
+}
+
+.how {
+  width: 100%;
+  height: 100%;
+}
+
+.how button {
+  width: 150px;
+  font-size: 18px;
+  background-color: #7a4171;
+  position: absolute;
+  top: 250px;
+  right: 30px;
+}
+
+.kanji {
+  font-family: 'Noto Serif JP', serif;
+  width: 60%;
+  height: 100%;
+  text-align: center;
+  line-height: 150%;
+  font-size: 200px;
+  position: absolute;
+  left: 0;
+}
+
+.answer {
+  width: 40%;
+  position: absolute;
+  left: 60%;
+  padding-top: 3.5%;
+}
+
+button {
+  width: 70%;
+  height: 10%;
+  margin-top: 10%;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 25px;
+  border: solid 3px #aaa;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.answer button:nth-child(1) {
+  background-color: #19448e;
+}
+
+.answer button:nth-child(2) {
+  background-color: #c9171e;
+}
+
+.answer button:nth-child(3) {
+  background-color: #007b43;
+}
+
+.answer button:nth-child(4) {
+  background-color: #e6b422;
+}
+
+.lanes {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes laneMove1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes laneMove2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.lanes img:first-child {
+  animation: laneMove1 12.5s linear infinite;
+  overflow: hidden;
+}
+
+.lanes img:last-child {
+  animation: laneMove2 12.5s linear infinite;
+}
+
+.sushi {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  top: -50px;
+  overflow: hidden;
+}
+
+.sushi img {
+  width: 30%;
+  position: absolute;
+  top: 30px;
+  right: -30%;
+  display: none;
+}
+
+@keyframes sushiAnim {
+  0% {
+    right: -30%;
+  }
+
+  100% {
+    right: 130%;
+  }
+}
+
+#sushianim {
+  display: block;
+  animation: sushiAnim 20s linear infinite normal none;
+}
+
+.score {
+  width: 100%;
+  position: relative;
+}
+
+.score img {
+  width: 10%;
+  position: absolute;
+  top: 30px;
+}
+
+.score p {
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+}
+
+.score .low img {
+  left: 90px;
+}
+
+.score .low p {
+  left: 160px;
+}
+
+.score .high img {
+  left: 360px;
+}
+
+.score .high p {
+  left: 430px;
+}
+
+.score .allscore {
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  padding-bottom: 25px;
+  border-bottom: dashed 2px #fff9fe;
+  position: absolute;
+  top: 80px;
+}
+
+.score button {
+  width: 200px;
+  height: 40px;
+  font-size: 23px;
+  background-color: #cd5e3c;
+  position: absolute;
+  top: 200px;
+  left: 35%;
+}
+
+#light {
+  border: solid 3px #f8e58c;
+}

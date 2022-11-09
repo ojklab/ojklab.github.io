@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>バイキングゲーム</title>
+    <style>
+      body {
+        width: 1000px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: x-large;
+        font-weight: lighter;
+        margin: 30px 10px;
+      }
+
+      h3 {
+        font-size: large;
+        font-weight: lighter;
+        margin: 30px 10px;
+      }
+
+      p {
+        color: peru;
+        font-size: small;
+        float: right;
+        margin: 0;
+        padding: 0;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      img:hover,
+      button:hover {
+        transform: scale(1.1);
+      }
+
+      img:active,
+      button:active {
+        transform: scale(0.9);
+      }
+
+      div {
+        background-color: antiquewhite;
+        border-radius: 10px;
+      }
+
+      button {
+        margin: 2em 2em 2em 1.2em;
+        background-color: peru;
+        color: white;
+        padding: 1em 2em;
+        border: none;
+        border-radius: 1em;
+        width: 200px;
+        font-size: medium;
+      }
+
+      #button {
+        background-color: transparent;
+        position: fixed;
+        bottom: 0;
+      }
+
+      #table {
+        padding: 1em;
+        margin-top: 3em;
+        width: 450px;
+        float: left;
+        background-color: cornsilk;
+      }
+
+      #table :hover {
+        transform: none;
+      }
+
+      #point {
+        padding: 5px;
+        margin-top: 5em;
+        width: 350px;
+        float: right;
+        background-color: rgba(255, 255, 255, 0.6);
+        color: darkolivegreen;
+      }
+
+      #end {
+        margin-top: 30px;
+        background-color: transparent;
+        width: 150px;
+        float: right;
+      }
+
+      #end button {
+        border-radius: 50%;
+        margin: 10px;
+        width: 150px;
+        height: 150px;
+        background-color: darkkhaki;
+      }
+
+      /* ここからコピペです */
+      .bg_skew_dot {
+        background-color: #fff;
+        background-image: radial-gradient(#e4ead4 20%, transparent 20%),
+          radial-gradient(#e4ead4 20%, transparent 20%);
+        background-size: 40px 40px;
+        background-position: 0 0, 20px 20px;
+      }
+
+      .is-mix {
+        background-image: radial-gradient(#e4ead4 20%, transparent 20%),
+          radial-gradient(#f2e7d0 20%, transparent 20%);
+      }
+      /* ここまでコピペです */
+    </style>
+  </head>
+
+  <body class="bg_skew_dot is-mix">
+    <br /><br />
+
+    <div>
+      <img :src="pan[0]" @click="add(150);table(pan[0])" />
+      <img :src="pan[1]" @click="add(200);table(pan[1])" />
+      <img :src="pan[2]" @click="add(150);table(pan[2])" />
+      <img :src="pan[3]" @click="add(200);table(pan[3])" />
+      <img :src="pan[4]" @click="add(200);table(pan[4])" />
+      <img :src="pan[5]" @click="add(150);table(pan[5])" />
+      <img :src="pan[6]" @click="add(100);table(pan[6])" />
+      <img :src="pan[7]" @click="add(120);table(pan[7])" />
+    </div>
+
+    <br />
+
+    <div>
+      <img :src="food[0]" @click="add(550);table(food[0])" />
+      <img :src="food[1]" @click="add(400);table(food[1])" />
+      <img :src="food[2]" @click="add(500);table(food[2])" />
+      <img :src="food[3]" @click="add(450);table(food[3])" />
+      <img :src="food[4]" @click="add(450);table(food[4])" />
+      <img :src="food[5]" @click="add(500);table(food[5])" />
+      <img :src="food[6]" @click="add(400);table(food[6])" />
+      <img :src="food[7]" @click="add(350);table(food[7])" />
+    </div>
+
+    <br />
+
+    <div>
+      <img :src="sweets[0]" @click="add(200);table(sweets[0])" />
+      <img :src="sweets[1]" @click="add(300);table(sweets[1])" />
+      <img :src="sweets[2]" @click="add(250);table(sweets[2])" />
+      <img :src="sweets[3]" @click="add(250);table(sweets[3])" />
+      <img :src="sweets[4]" @click="add(100);table(sweets[4])" />
+      <img :src="sweets[5]" @click="add(100);table(sweets[5])" />
+      <img :src="sweets[6]" @click="add(100);table(sweets[6])" />
+      <img :src="sweets[7]" @click="add(200);table(sweets[7])" />
+    </div>
+
+    <div id="table">
+      <img :src="dish[0]" />
+      <img :src="dish[1]" />
+      <img :src="dish[2]" /><br />
+      <img :src="dish[3]" />
+      <img :src="dish[4]" />
+      <img :src="dish[5]" />
+      <p>満腹ポイント:{{sto}}</p>
+    </div>
+
+    <div id="button">
+      <button @click="eat">食べる</button>
+      <button @click="reset">リセット</button>
+    </div>
+
+    <div id="end">
+      <button @click="end">お店を出る</button>
+      <button @click="start">最初から</button>
+    </div>
+
+    <div id="point">
+      名前：<input @input="name" :value="text" />
+      <h2>残り <span :style="enp2">{{take}}</span> 回</h2>
+      <h3>
+        {{text}}さんの満腹度:
+        <div :style="enp">{{full}}</div>
+        ポイント
+      </h3>
+    </div>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

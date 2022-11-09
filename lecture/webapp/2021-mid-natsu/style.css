@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: '游ゴシック';
+}
+
+input[type='radio'] {
+  width: 1.5em;
+  height: 1.5em;
+  margin-bottom: 1em;
+}
+
+input[type='radio']:checked + label {
+  color: #304848;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2em;
+  margin-bottom: 2vh;
+}
+
+label {
+  padding-left: 1em;
+  font-size: 1.2em;
+}
+
+h1 {
+  text-align: center;
+  height: 3em;
+  margin: 0;
+  margin-bottom: 5vh;
+  background-color: #9cb5b8;
+  color: white;
+  padding-top: 1.4em;
+}
+
+.name {
+  width: 20em;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+}
+
+.emotions {
+  width: 20em;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+}
+
+.style {
+  width: 20em;
+  margin: 0 auto;
+  margin-bottom: 5vh;
+}
+
+input[type='text'] {
+  width: 20em;
+  height: 2em;
+}
+
+button {
+  display: block;
+  width: 12em;
+  height: 4em;
+  margin: 0 auto;
+  background-color: #487878;
+  color: white;
+  border: none;
+  border-radius: 5em;
+  cursor: pointer;
+  margin-bottom: 5em;
+}
+
+button:hover {
+  background-color: none;
+  border: solid 1px #487878;
+}
+
+.result {
+  text-align: center;
+  width: 50em;
+  margin: 0 auto;
+}
+
+.youtube {
+  margin-bottom: 5vh;
+}
+
+.size {
+  width: 20em;
+  text-align: center;
+  position: relative;
+  margin: 0 0 0 auto;
+  margin-bottom: 2em;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: gray;
+}
+
+a:visited {
+  color: black;
+}
+
+.display {
+  opacity: 0%;
+}
+
+.share {
+  text-align: center;
+  margin-bottom: 5em;
+}
