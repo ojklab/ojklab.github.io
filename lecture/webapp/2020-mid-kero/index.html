@@ -1,87 +1,223 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>ラーメン作りゲーム</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <title>中間課題</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <!-- HTML -->
+    <div id="app">
+      <h1>ラーメン作りゲーム 〜ラーメン道男〜</h1>
+      <div class="game">
+        <div id="floor">
+          <h2>{{pt}}</h2>
+          <input
+            type="radio"
+            name="guest"
+            value="one"
+            id="one"
+            v-model="guest"
+          />
+          <label for="one" style="background-image: none" class="guest">
+            <div class="order">注文</div>
+            <div class="ramorder" id="shoyuton">とんこつ醤油</div>
+            <div class="ramorder" id="sioton">とんこつ塩</div>
+            <div class="ramorder" id="shoyutori">とりがら醤油</div>
+            <div class="ramorder" id="siotori">とりがら塩</div>
+            <div class="toporder" id="negiout">ネギ抜き</div>
+            <div class="toporder" id="menmaout">メンマ抜き</div>
+            <div class="toporder" id="eggout">たまご抜き</div>
+          </label>
+        </div>
+        <div id="kitchen">
+          <input
+            type="checkbox"
+            name="ramen"
+            value="menyude"
+            id="menyude"
+            v-model="ramen"
+          />
+          <label for="menyude"></label>
 
-<body>
-  <!-- HTML -->
-  <div id="app">
-    <h1>ラーメン作りゲーム 〜ラーメン道男〜</h1>
-    <div class="game">
-      <div id="floor">
-        <h2>{{pt}}</h2>
-        <input type="radio" name="guest" value="one" id="one" v-model="guest">
-        <label for="one" style="background-image: none" class="guest">
-          <div class="order">注文</div>
-          <div class="ramorder" id="shoyuton">とんこつ醤油</div>
-          <div class="ramorder" id="sioton">とんこつ塩</div>
-          <div class="ramorder" id="shoyutori">とりがら醤油</div>
-          <div class="ramorder" id="siotori">とりがら塩</div>
-          <div class="toporder" id="negiout">ネギ抜き</div>
-          <div class="toporder" id="menmaout">メンマ抜き</div>
-          <div class="toporder" id="eggout">たまご抜き</div>
-        </label>
+          <input
+            type="radio"
+            name="soup"
+            value="tonsoup"
+            id="tonsoup"
+            v-model="soup"
+          />
+          <label for="tonsoup"></label>
+          <input
+            type="radio"
+            name="soup"
+            value="torisoup"
+            id="torisoup"
+            v-model="soup"
+          />
+          <label for="torisoup"></label>
 
-      </div>
-      <div id="kitchen">
-        <input type="checkbox" name="ramen" value="menyude" id="menyude" v-model="ramen">
-        <label for="menyude"></label>
+          <input
+            type="radio"
+            name="tare"
+            value="shoyutare"
+            v-model="tare"
+            id="shoyutare"
+          />
+          <label for="shoyutare"></label>
+          <input
+            type="radio"
+            name="tare"
+            value="siotare"
+            v-model="tare"
+            id="siotare"
+          />
+          <label for="siotare"></label>
 
-        <input type="radio" name="soup" value="tonsoup" id="tonsoup" v-model="soup">
-        <label for="tonsoup"></label>
-        <input type="radio" name="soup" value="torisoup" id="torisoup" v-model="soup">
-        <label for="torisoup"></label>
+          <input
+            type="checkbox"
+            name="ramen"
+            value="tyashu"
+            id="tyashu"
+            v-model="ramen"
+          />
+          <label for="tyashu"></label>
+          <input
+            type="checkbox"
+            name="ramen"
+            value="egg"
+            id="egg"
+            v-model="ramen"
+          />
+          <label for="egg"></label>
+          <input
+            type="checkbox"
+            name="ramen"
+            value="menma"
+            id="menma"
+            v-model="ramen"
+          />
+          <label for="menma"></label>
+          <input
+            type="checkbox"
+            name="ramen"
+            value="nori"
+            id="nori"
+            v-model="ramen"
+          />
+          <label for="nori"></label>
+          <input
+            type="checkbox"
+            name="ramen"
+            value="negi"
+            id="negi"
+            v-model="ramen"
+          />
+          <label for="negi"></label>
+          <input
+            type="checkbox"
+            name="ramen"
+            value="naruto"
+            id="naruto"
+            v-model="ramen"
+          />
+          <label for="naruto"></label>
 
-        <input type="radio" name="tare" value="shoyutare" v-model="tare" id="shoyutare">
-        <label for="shoyutare"></label>
-        <input type="radio" name="tare" value="siotare" v-model="tare" id="siotare">
-        <label for="siotare"></label>
+          <img src="img/don.png" class="ramen don" />
 
-        <input type="checkbox" name="ramen" value="tyashu" id="tyashu" v-model="ramen">
-        <label for="tyashu"></label>
-        <input type="checkbox" name="ramen" value="egg" id="egg" v-model="ramen">
-        <label for="egg"></label>
-        <input type="checkbox" name="ramen" value="menma" id="menma" v-model="ramen">
-        <label for="menma"></label>
-        <input type="checkbox" name="ramen" value="nori" id="nori" v-model="ramen">
-        <label for="nori"></label>
-        <input type="checkbox" name="ramen" value="negi" id="negi" v-model="ramen">
-        <label for="negi"></label>
-        <input type="checkbox" name="ramen" value="naruto" id="naruto" v-model="ramen">
-        <label for="naruto"></label>
+          <img
+            src="img/men.png"
+            class="ramen men"
+            :class="menyude"
+            alt="具材"
+          />
 
-        <img src="img/don.png" class="ramen don">
+          <img
+            src="img/soup/shoyu.png"
+            class="ramen tare"
+            :class="shoyutare"
+            alt="具材"
+          />
+          <img
+            src="img/soup/shoyuton.png"
+            class="ramen soup"
+            :class="shoyuton"
+            alt="具材"
+          />
+          <img
+            src="img/soup/shoyutori.png"
+            class="ramen soup"
+            :class="shoyutori"
+            alt="具材"
+          />
 
-        <img src="img/men.png" class="ramen men" :class="menyude" alt="具材">
+          <img
+            src="img/soup/sio.png"
+            class="ramen tare"
+            :class="siotare"
+            alt="具材"
+          />
+          <img
+            src="img/soup/sioton.png"
+            class="ramen soup"
+            :class="sioton"
+            alt="具材"
+          />
+          <img
+            src="img/soup/siotori.png"
+            class="ramen soup"
+            :class="siotori"
+            alt="具材"
+          />
 
-        <img src="img/soup/shoyu.png" class="ramen tare" :class="shoyutare" alt="具材">
-        <img src="img/soup/shoyuton.png" class="ramen soup" :class="shoyuton" alt="具材">
-        <img src="img/soup/shoyutori.png" class="ramen soup" :class="shoyutori" alt="具材">
-
-        <img src="img/soup/sio.png" class="ramen tare" :class="siotare" alt="具材">
-        <img src="img/soup/sioton.png" class="ramen soup" :class="sioton" alt="具材">
-        <img src="img/soup/siotori.png" class="ramen soup" :class="siotori" alt="具材">
-
-        <img src="img/topping/tyashu.png" class="ramen topping" class="tyashu" :class="tyashu" alt="具材">
-        <img src="img/topping/negi.png" class="ramen topping" :class="negi" alt="具材" id="negit">
-        <img src="img/topping/egg.png" class="ramen topping" :class="egg" alt="具材" id="eggt">
-        <img src="img/topping/menma.png" class="ramen topping" :class="menma" alt="具材" id="menmat">
-        <img src="img/topping/naruto.png" class="ramen topping" :class="naruto" alt="具材">
-        <img src="img/topping/nori.png" class="ramen topping" class="nori" :class="nori" alt="具材">
+          <img
+            src="img/topping/tyashu.png"
+            class="ramen topping"
+            class="tyashu"
+            :class="tyashu"
+            alt="具材"
+          />
+          <img
+            src="img/topping/negi.png"
+            class="ramen topping"
+            :class="negi"
+            alt="具材"
+            id="negit"
+          />
+          <img
+            src="img/topping/egg.png"
+            class="ramen topping"
+            :class="egg"
+            alt="具材"
+            id="eggt"
+          />
+          <img
+            src="img/topping/menma.png"
+            class="ramen topping"
+            :class="menma"
+            alt="具材"
+            id="menmat"
+          />
+          <img
+            src="img/topping/naruto.png"
+            class="ramen topping"
+            :class="naruto"
+            alt="具材"
+          />
+          <img
+            src="img/topping/nori.png"
+            class="ramen topping"
+            class="nori"
+            :class="nori"
+            alt="具材"
+          />
+        </div>
       </div>
     </div>
-  </div>
 
-
-  <!-- JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script type="text/javascript" src="js/js.js">
-  </script>
-
-</body>
-
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="js/js.js"></script>
+  </body>
 </html>
