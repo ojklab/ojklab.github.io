@@ -1,0 +1,277 @@
+body {
+  background-color: #ffffe0;
+  width: 100%;
+}
+
+#app {
+  text-align: center;
+  width: 100%;
+}
+
+.game {
+  position: relative;
+  margin: 10px auto;
+  width: 70%;
+  height: 50vw;
+  background-color: #666;
+}
+
+#floor {
+  position: relative;
+  background-color: #deb887;
+  width: 100%;
+  height: 35%;
+  top: 0px;
+}
+
+h2 {
+  position: absolute;
+  left: 2%;
+  top: 2%;
+  font-size: 2.5vw;
+  margin: 0;
+}
+
+h2::before {
+  content: '現在の売り上げ '
+}
+
+h2::after {
+  content: '円'
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: absolute;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+input[type="radio"]:checked + label {
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: solid 2px #fff;
+  border-radius: 5px;
+}
+
+input[name="guest"] + label {
+  width: 33%;
+  height: 80%;
+  top: 23%;
+}
+
+input[name="guest"] + label::after {
+  content: "";
+  font-size: 1.5vw;
+  position: absolute;
+  width: 48%;
+  height: 93%;
+  background-color: #fff;
+  border-radius: 15px;
+  left: 45%;
+  top: 1%;
+}
+
+input[name="guest"]:checked + label {
+  border:none;
+}
+
+input[name="guest"] + label[for="one"],
+input[name="guest"]:checked + label[for="one"] {
+  left: 36%;
+}
+
+#floor label div {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  font-size: 1.5vw;
+  width: 48%;
+  height: 1.5vw;
+  left: 45%;
+}
+
+.order {
+  top: 3%;
+}
+
+.ramorder {
+  top:30%;
+  display: none;
+}
+
+.toporder {
+  top: 60%;
+  display: none;
+}
+
+#kitchen {
+  position: relative;
+  background-color: #a9a9a9;
+  border-top: solid 2px #999;
+  width: 100%;
+  height: 65%;
+  bottom: 0px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: absolute;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+input[type="checkbox"]:checked + label {
+  background-repeat: no-repeat;
+  background-size: contain;
+  border: solid 2px #fff;
+  border-radius: 5px;
+}
+
+input[name="ramen"] + label[for="menyude"],
+input[name="ramen"]:checked + label[for="menyude"] {
+  background-image: url("../img/menyude.png");
+  left: 2%;
+  top: 5%;
+  width: 25%;
+  height: 90%;
+}
+
+input[name="soup"] + label {
+  top: 2%;
+  width: 15%;
+  height: 38%;
+}
+
+input[name="soup"] + label[for="tonsoup"],
+input[name="soup"]:checked + label[for="tonsoup"] {
+  background-image: url("../img/tonsoup.png");
+  left: 30%;
+}
+
+input[name="soup"] + label[for="torisoup"],
+input[name="soup"]:checked + label[for="torisoup"] {
+  background-image: url("../img/torisoup.png");
+  left: 47%;
+}
+
+input[name="tare"] + label {
+  top: 50%;
+  width: 15%;
+  height: 33%;
+}
+
+input[name="tare"] + label[for="shoyutare"],
+input[name="tare"]:checked + label[for="shoyutare"] {
+  background-image: url("../img/shoyutare.png");
+  left: 30%;
+}
+
+input[name="tare"] + label[for="siotare"],
+input[name="tare"]:checked + label[for="siotare"] {
+  background-image: url("../img/salttare.png");
+  left: 47%;
+}
+
+input[name="ramen"] + label {
+  width: 11%;
+  height: 13%;
+}
+
+input[name="ramen"] + label[for="tyashu"],
+input[name="ramen"]:checked + label[for="tyashu"] {
+  background-image: url("../img/tyashu.png");
+  right: 25%;
+  top: 5%;
+}
+
+input[name="ramen"] + label[for="egg"],
+input[name="ramen"]:checked + label[for="egg"] {
+  background-image: url("../img/egg.png");
+  right: 25%;
+  top: 20%;
+}
+
+input[name="ramen"] + label[for="menma"],
+input[name="ramen"]:checked + label[for="menma"] {
+  background-image: url("../img/menma.png");
+  right: 13%;
+  top: 5%;
+}
+
+input[name="ramen"] + label[for="nori"],
+input[name="ramen"]:checked + label[for="nori"] {
+  background-image: url("../img/nori.png");
+  right: 13%;
+  top: 20%;
+}
+
+input[name="ramen"] + label[for="negi"],
+input[name="ramen"]:checked + label[for="negi"] {
+  background-image: url("../img/negi.png");
+  right: 1%;
+  top: 5%;
+}
+
+input[name="ramen"] + label[for="naruto"],
+input[name="ramen"]:checked + label[for="naruto"] {
+  background-image: url("../img/naruto.png");
+  right: 1%;
+  top: 20%;
+}
+
+.ramen {
+  position: absolute;
+  width: 25%;
+  top: 40%;
+  left: 70%;
+}
+
+.don {
+  z-index: 10;
+}
+
+.nori {
+  z-index: 15;
+}
+
+.men {
+  display: none;
+  z-index: 20;
+}
+
+.soup,
+.tare {
+  opacity: .9;
+  z-index: 30;
+  display: none;
+}
+
+.tare {
+  opacity: .9;
+}
+
+.topping {
+  display: none;
+  z-index: 40;
+}
+
+.tyashu {
+  z-index: 35;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

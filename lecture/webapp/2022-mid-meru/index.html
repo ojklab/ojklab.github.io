@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ヘアサロンへようこそ！</title>
+    <style>
+      body {
+        background-image: url(./image/bg.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .btn {
+        font-size: 60px;
+        padding: 30px 125px;
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        letter-spacing: 5px;
+        border-radius: 70px;
+        color: rgb(7, 102, 146);
+        border: solid 3px rgb(7, 102, 146);
+        text-decoration: none;
+      }
+
+      .btn:hover {
+        transition: 0.3s;
+        background-color: rgb(7, 102, 146);
+        color: aliceblue;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- class属性とstyle属性にゲッターをバインドする -->
+
+    <a :href="url" class="btn">play</a>
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

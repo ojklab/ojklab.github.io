@@ -1,0 +1,187 @@
+body {
+    text-align: center;
+    width: 80%;
+    background-color: #faf5eb;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color: #fc97ad;
+    margin-bottom: 50px;
+}
+
+p {
+    margin: 0 auto 30px;
+    line-height: 2em;
+}
+
+
+/*ボタン装飾参考文献
+https://pulpxstyle.com/button-textlink-20200401/
+↓↓ここから*/
+
+.btn01 a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1em 2em;
+    width: 300px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    background-color: #ffb4c4;
+    transition: 0.3s;
+    margin: 80px auto;
+}
+
+.btn01 a::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #333333;
+    border-right: 3px solid #333333;
+    transform: rotate(45deg);
+}
+
+.btn01 a:hover {
+    text-decoration: none;
+    background-color: #fc97ad;
+}
+
+
+/* ↑↑ここまで */
+
+h2 {
+    color: #7c4d3d;
+    margin-top: 30px;
+}
+
+span {
+    color: #ffa9bc;
+}
+
+img {
+    width: 100%;
+    margin: 50px auto;
+}
+
+li {
+    line-height: 2em;
+}
+
+
+/*ポイント部分参考文献
+https://saruwakakun.com/html-css/reference/ul-ol-li-design
+↓↓ここから*/
+
+ul {
+    border: solid 2px #7c4d3d;
+    padding: 0.5em 1em 0.5em 2.3em;
+    position: relative;
+    margin-top: 60px;
+}
+
+ul li {
+    line-height: 1.7em;
+    padding: 0.5em 0;
+    list-style-type: none;
+}
+
+ul li:before {
+    /*リストのアイコン*/
+    font-family: 'Font Awesome 5 Free';
+    content: '✔';
+    position: absolute;
+    left: 1em;
+    /*左端からのアイコンまでの距離*/
+    color: #7c4d3d;
+    /*アイコン色*/
+}
+
+ul li:after {
+    /*タブ*/
+    background: #7c4d3d;
+    color: #fff;
+    font-family: 'Font Awesome 5 Free', 'Avenir', 'Arial', sans-serif;
+    position: absolute;
+    left: -2px;
+    bottom: 100%;
+    padding: 1px 7px;
+    content: 'Point';
+    /*アイコンコード＋文字*/
+    letter-spacing: 0.05em;
+    /*字間*/
+}
+
+
+/* ↑↑ここまで */
+
+
+/*見出しデザイン参考文献
+https://pulpxstyle.com/heading-design/
+↓↓ここから*/
+
+.questions {
+    position: relative;
+    font-size: 20px;
+    margin: 50px auto 20px;
+    color: #7c4d3d;
+}
+
+.questions::before {
+    content: attr(data-number);
+    display: inline-block;
+    margin-right: 20px;
+    color: #98ece8;
+    font-size: 25px;
+    border-bottom: 1px solid #98ece8;
+}
+
+
+/* ↑↑ここまで */
+
+.left {
+    width: 90%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*ラインデザイン参考文献
+https://pulpxstyle.com/post-98/
+↓↓ここから*/
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: repeating-linear-gradient( 90deg, #ffa9bc 0px, #ffa9bc 4px, rgba(0, 0, 0, 0) 4px, rgba(0, 0, 0, 0) 12px);
+    margin: 50px auto;
+}
+
+
+/* ↑↑ここまで */
+
+.result {
+    padding: 1.5em 1em;
+    margin: 2em 0;
+    border: double 7px #98ece8;
+}
+
+.result p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+input[type="radio"]:checked+label {
+    background-color: #98ece8;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+input[type="radio"] {
+    display: none;
+}

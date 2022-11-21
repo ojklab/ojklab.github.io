@@ -1,0 +1,227 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.parent {
+  position: relative;
+}
+
+.back_img {
+  position: absolute;
+  top: 0;
+  left: 200px;
+}
+
+.dog_img {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 200px;
+}
+
+.back_img img {
+  border: solid 5px #594236;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+p {
+  font-size: 22px;
+  font-family: 'Kosugi Maru', sans-serif;
+  text-align: center;
+}
+
+button {
+  font-size: 20px;
+  font-family: 'Kosugi Maru', sans-serif;
+  background-color: #4D9DE0;
+  color: #FFFFFF;
+  border: solid 5px #FAFF81;
+  border-radius: 10px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.title_name {
+  position: fixed;
+  top: 100px;
+  left: 385px;
+}
+
+.title_name button {
+  width: 150px;
+  height: 50px;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+.address {
+  position: fixed;
+  top: 100px;
+  left: 400px;
+}
+
+select {
+  font-size: 20px;
+}
+
+.address button {
+  width: 100px;
+  height: 50px;
+  margin-left: 70px;
+  margin-top: 25%;
+}
+
+.name_label {
+  position: fixed;
+  top: 100px;
+  left: 280px;
+}
+
+input {
+  font-size: 20px;
+}
+
+.name_label button {
+  width: 100px;
+  height: 50px;
+  margin-left: 185px;
+  margin-top: 10%;
+}
+
+.Explanation {
+  position: fixed;
+  top: 40px;
+  left: 320px;
+}
+
+.Explanation button {
+  width: 100px;
+  height: 50px;
+  margin-left: 130px;
+  margin-top: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 220px;
+  left: 0;
+}
+
+.menu button {
+  width: 130px;
+  height: 50px;
+  font-size: 22px;
+  font-family: 'Kosugi Maru', sans-serif;
+  margin-top: 6px;
+}
+
+.menu button:first-child {
+  margin-left: 17%;
+  border: solid 5px #FAFF81;
+  border-radius: 10px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.menu button:nth-child(2) {
+  margin-left: 17%;
+  border: solid 5px #FAFF81;
+  border-radius: 10px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.menu button:last-child {
+  margin-left: 17%;
+  border: solid 5px #FAFF81;
+  border-radius: 10px;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.nameplate {
+  color: #ffffff;
+  position: absolute;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  top: 8px;
+  left: 74.2%;
+  width: 190px;
+  height: 35px;
+  line-height: 35px;
+  border: solid 5px #FAFF81;
+  background-color: #594236;
+}
+
+.status {
+  position: absolute;
+  top: 48px;
+  left: 74.2%;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Kosugi Maru', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.status p {
+  margin: 0;
+}
+
+.status table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-top: solid 5px #FAFF81;
+  width: 200px;
+  height: 130px;
+  text-align: center;
+  background-color: #594236;
+}
+
+.status table td {
+  margin: 0;
+  padding: 0;
+  border-bottom: solid 5px #FAFF81;
+}
+
+.status table td:first-child {
+  border-left: solid 5px #FAFF81;
+}
+
+.status table td:last-child {
+  border-right: solid 5px #FAFF81;
+  border-left: solid 5px #FAFF81;
+}
+
+.text_window {
+  position: fixed;
+  z-index: 1000;
+  top: 390px;
+  left: 200px;
+  text-align: center;
+  width: 600px;
+  height: 150px;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 0;
+  border: solid 5px #594236;
+  background-color: #ffffff;
+}
+
+.text_window p {
+  margin: 10px 0;
+}
+
+.text_window button {
+  width: 100;
+  height: 40px;
+  padding: 0 20px;
+}
+
+.eyes_button {
+  width: 500px;
+}

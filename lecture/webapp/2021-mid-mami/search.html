@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ウェブアプリケーション設計演習</title>
+</head>
+
+<body>
+    <h1>骨格スタイル診断</h1>
+
+    <p>
+        骨格タイプを自己診断！<br /> 各項目で当てはまるものにチェックを入れましょう。
+    </p>
+
+    <ul>
+        <div class="left">
+            <li>家族や友人など複数の人と身体の特徴を比べてみると分かりやすいです</li>
+            <li>
+                太っている、痩せているは関係ありません。どうしても気になる場合は「自分が標準体型だったら」と考えてみましょう
+            </li>
+        </div>
+    </ul>
+
+    <hr />
+
+    <label>お名前：<input type="text" v-model="name" /></label>
+
+    <h2 class="questions" data-number="01">全体の印象は？</h2>
+    <div class="left">
+        <ol type="A">
+            <li><input type="radio" name="all" v-model="all" value="A" id="01" /><label for="01">体に厚みがあり肉感的</label></li>
+            <li><input type="radio" name="all" v-model="all" value="B" id="02" /><label for="02">上半身は薄いが、下半身が重く感じる</label></li>
+            <li><input type="radio" name="all" v-model="all" value="C" id="03" /><label for="03">骨がしっかりしていて、肉感的ではない</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="02">肌の質感は？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="skin"
+          v-model="skin"
+          value="A"
+          id="04"
+        /><label for="04">押し返すような弾力のある質感</label></li>
+            <li><input type="radio" name="skin" v-model="skin" value="B" id="05" /><label for="05">しっとり柔らかい質感</label></li>
+            <li><input type="radio" name="skin" v-model="skin" value="C" id="06" /><label for="06">皮膚が硬く、関節や筋が目立つ</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="03">首の特徴は？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="neck"
+          v-model="neck"
+          value="A"
+          id="07"
+        /><label for="07">どちらかというと短い</label></li>
+            <li><input type="radio" name="neck" v-model="neck" value="B" id="08" /><label for="08">どちらかというと長い</label></li>
+            <li><input type="radio" name="neck" v-model="neck" value="C" id="09" /><label for="09">太くて筋が目立つ</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="04">鎖骨の特徴は？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="sakotu"
+          v-model="sakotu"
+          value="A"
+          id="10"
+        /><label for="10">さほど目立たない</label></li>
+            <li><input type="radio" name="sakotu" v-model="sakotu" value="B" id="11" /><label for="11">細めの鎖骨が見える</label></li>
+            <li><input type="radio" name="sakotu" v-model="sakotu" value="C" id="12" /><label for="12">しっかり出ていて、骨が太い</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="05">胸板のあつみは？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="bust"
+          v-model="bust"
+          value="A"
+          id="13"
+        /><label for="13">横から見ると立体的で傾斜がある</label></li>
+            <li><input type="radio" name="bust" v-model="bust" value="B" id="14" /><label for="14">横から見るとなだらかで薄い</label></li>
+            <li><input type="radio" name="bust" v-model="bust" value="C" id="15" /><label for="15">どちらでもない</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="06">ウエストの特徴は？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="waist"
+          v-model="waist"
+          value="A"
+          id="16"
+        /><label for="16">くびれがあまりない</label></li>
+            <li><input type="radio" name="waist" v-model="waist" value="B" id="17" /><label for="17">くびれが分かりやすい</label></li>
+            <li><input type="radio" name="waist" v-model="waist" value="C" id="18" /><label for="18">どちらでもない</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="07">手の平、甲の特徴は？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="hand"
+          v-model="hand"
+          value="A"
+          id="19"
+        /><label for="19">手の平に厚みがある</label></li>
+            <li><input type="radio" name="hand" v-model="hand" value="B" id="20" /><label for="20">手の平はうすい</label></li>
+            <li><input type="radio" name="hand" v-model="hand" value="C" id="21" /><label for="21">厚さよりも、手の甲が筋っぽいのが目立つ</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="08">手首の特徴は？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="hand2"
+          v-model="hand2"
+          value="A"
+          id="22"
+        /><label for="22">細く、断面にすると丸に近い</label></li>
+            <li><input type="radio" name="hand2" v-model="hand2" value="B" id="23" /><label for="23">幅が広くて薄く、断面にすると平べったい形</label></li>
+            <li><input type="radio" name="hand2" v-model="hand2" value="C" id="24" /><label for="24">骨がしっかりしている</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="09">太もも、膝下の形は？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="leg"
+          v-model="leg"
+          value="A"
+          id="25"
+        /><label for="25">太ももは太く膝下は細い、骨はまっすぐ</label></li>
+            <li><input type="radio" name="leg" v-model="leg" value="B" id="26" /><label for="26">太ももは細く膝下は太い、すねは外部に湾曲しやすい</label></li>
+            <li><input type="radio" name="leg" v-model="leg" value="C" id="27" /><label for="27">太ももは肉感的でなく、すねがしっかりしている</label
+      >
+    </ol>
+</div>
+
+    <h2 class="questions" data-number="10">足の特徴は？</h2>
+<div class="left">
+<ol type="A">
+      <li><input
+          type="radio"
+          name="foot"
+          v-model="foot"
+          value="A"
+          id="28"
+        /><label for="28">身長や大きさの割に小さい</label></li>
+            <li><input type="radio" name="foot" v-model="foot" value="B" id="29" /><label for="29">身長や体の大きさとバランスのとれた大きさ</label></li>
+            <li><input type="radio" name="foot" v-model="foot" value="C" id="30" /><label for="30">身長や大きさの割に大きい</label
+      >
+    </ol>
+</div>
+
+    <div class="btn01" @click="count()">
+      <a>診断結果を見る</a>
+    </ol>
+</div>
+
+    <!-- <p>{{type}}</p> -->
+    <div class="result" :style="show">
+    <p>{{name}}さんの骨格は<span>{{style}}タイプ</span>です。</p>
+    </div>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

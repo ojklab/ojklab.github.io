@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ヘアサロンへようこそ！</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg_home">
+    <p class="h_text">{{ho_text}}</p>
+
+    <button @click="change_text" class="text_btn2" :style="kesu">
+      {{yazirusi1}}
+    </button>
+
+    <a href="./start.html" class="homeImg">
+      <img src="./image/goshop.png" alt="go"
+    /></a>
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

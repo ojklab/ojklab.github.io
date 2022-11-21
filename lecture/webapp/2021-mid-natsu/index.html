@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おすすめの曲診断</title>
+</head>
+
+<body>
+
+  <h1>おすすめの曲診断</h1>
+
+  <div class="size">
+    <ul>
+      <li>文字の大きさ　</li>
+      <li><a @click="size1">小</a></li>
+      <li>｜</li>
+      <li><a @click="size2">中</a></li>
+      <li>｜</li>
+      <li><a @click="size3">大</a></li>
+    </ul>
+</div>
+
+  <div class="question" :style="styleQuestion">
+
+  <div class="name">
+    <p :style="styleSize">ニックネームを入力してください</p>
+    <input :style="styleInput" type="text"  v-model="name">
+  </div>
+
+  <div class="emotions">
+
+    <p :style="styleSize">今の気持ちは？</p>
+
+    <input v-model="emo" type="radio"
+  name="emo" value="楽しい" id="radio1-1"><label for="radio1-1" :style="styleSize">楽しい</label><br>
+
+  <input v-model="emo" type="radio"
+  name="emo" value="悲しい" id="radio1-2"><label for="radio1-2" :style="styleSize">悲しい</label><br> 
+
+  <input v-model="emo" type="radio"
+  name="emo" value="爽やか" id="radio1-3"><label for="radio1-3" :style="styleSize">爽やか</label><br> 
+
+  <input v-model="emo" type="radio"
+  name="emo" value="落ち着く" id="radio1-4"><label for="radio1-4" :style="styleSize">落ち着く</label><br> 
+
+  <input v-model="emo" type="radio"
+  name="emo" value="盛り上がりたい" id="radio1-5"><label for="radio1-4" :style="styleSize">盛り上がりたい</label><br> 
+
+</div>
+
+<div class="style">
+
+  <p :style="styleSize">聴きたい歌手のスタイルは？</p>
+
+  <input v-model="style" type="radio"
+  name="style" value="ソロ歌手" id="radio2-1"><label for="radio2-1" :style="styleSize">ソロ歌手</label><br>
+
+  <input v-model="style" type="radio"
+  name="style" value="バンド" id="radio2-2"><label for="radio2-2" :style="styleSize">バンド</label><br>
+
+  <input v-model="style" type="radio"
+  name="style" value="アイドル" id="radio2-3"><label for="radio2-3" :style="styleSize">アイドル</label><br>
+
+  <input v-model="style" type="radio"
+  name="style" value="ボーカロイド" id="radio2-4"><label id="radio2-4" :style="styleSize">ボーカロイド</label><br>
+
+</div>
+
+<br>
+
+<div class="button">
+<button @click="diag" id="diagButton">診断する!!</button></div></div>
+
+
+
+
+<div class="result" :style="styleResult">
+
+  <h2>-{{name}}さんへのおすすめ-</h2>
+
+<p :style="styleSize">「{{emo}}」という気持ちの時におすすめの{{style}}の曲は…</p>
+
+<p :style="styleSize">「{{artist}}」の「{{song}}」</p>
+
+<div class="youtube">
+
+
+  <iframe width="560" height="315"
+  
+  :src="url"
+  
+  title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+
+</div>
+
+
+
+<button @click="retry" id="retryButton">もう一度!</button>
+
+</div>
+
+<div id="share" class="share display">
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+
+  data-text="おすすめの曲診断 あなたも挑戦してみよう" 
+
+  <!-- :date-text="name" ←効かない -->
+
+  data-show-count="false" >Tweet</a>
+  
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+
+  
+
+
+  <script src="https://unpkg.com/petite-vue"></script>
+  <script src="script.js"></script>
+</body>
+
+
+
+</html>
