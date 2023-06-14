@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: "Kosugi Maru", sans-serif;
+  font-family: 'Kosugi Maru', sans-serif;
   box-sizing: border-box;
 }
 
@@ -34,7 +34,7 @@ a {
 }
 
 h1 {
-  font-family: "ZCOOL XiaoWei", serif;
+  font-family: 'ZCOOL XiaoWei', serif;
   background-color: #364e96;
   color: white;
   font-size: 60px;
@@ -52,6 +52,7 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 2rem;
+  gap: 1rem;
 }
 
 nav div {
@@ -104,7 +105,7 @@ h3 {
 }
 
 h3:before {
-  content: "";
+  content: '';
   position: absolute;
   background: #9de5ff;
   width: 36px;
@@ -146,7 +147,7 @@ ul:not(.normal_list) li {
 ul:not(.normal_list) li:before {
   /*  font-family: "Font Awesome 5 Free"; */
   /* content: "\f138"; */
-  content: "▶";
+  content: '▶';
   position: absolute;
   left: 1em;
   color: #bf783a;
@@ -163,7 +164,7 @@ dd {
 
 .sch dd::before {
   font-size: small;
-  content: "◉ ";
+  content: '◉ ';
   color: #364e96;
 }
 
@@ -181,14 +182,14 @@ dt:first-child {
 }
 
 .faq dt::before {
-  content: "Q: ";
+  content: 'Q: ';
   font-size: 1.2em;
   font-weight: bold;
   color: #364e96;
 }
 
 .faq dd::before {
-  content: "A: ";
+  content: 'A: ';
   font-size: 1.2em;
   font-weight: bold;
   color: #bf783a;
