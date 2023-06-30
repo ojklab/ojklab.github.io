@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>7</title>
+    <style>
+      p {
+        margin: 1rem 0;
+        border: solid gold 4px;
+        padding: 8px 16px;
+      }
+
+      select {
+        margin: 1rem 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>JavaScript</p>
+
+    <form action="#">
+      <label>Text: <input name="text" /></label>
+      <br />
+      <label
+        >Size:
+        <select name="font"></select
+      ></label>
+      <br />
+      <button type="submit">設定</button>
+    </form>
+
+    <script>
+      document.oncontextmenu = () => false;
+
+      const f = document.querySelector('form');
+      for (let i = 1; i <= 4; i += 1) {
+        const opt = document.createElement('option');
+        opt.value = 8 * i;
+        opt.textContent = opt.value;
+        if (opt.value == 16) opt.selected = true;
+        f.font.appendChild(opt);
+      }
+      const p = document.querySelector('p');
+      const text = document.querySelector('input');
+      const size = document.querySelector('select');
+      f.addEventListener('submit', (e) => {
+        if (text.value) {
+          p.textContent = text.value;
+        }
+        p.style.fontSize = size.value + 'px';
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>

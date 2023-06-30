@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>6</title>
+    <style>
+      div {
+        box-sizing: border-box;
+        width: 200px;
+        height: 200px;
+        border: solid 5px lightgray;
+        line-height: 200px;
+        text-align: center;
+        user-select: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div></div>
+
+    <label><input type="radio" name="style" value="border-color" checked />Border</label>
+    <label><input type="radio" name="style" value="background-color" />Background</label>
+
+    <script>
+      document.oncontextmenu = () => false;
+
+      const colors = ['firebrick', 'cornflowerblue', 'teal', 'gold'];
+      let setStyle = 'border-color';
+      let cnt = 0;
+      const div = document.querySelector('div');
+      const nextColor = () => {
+        cnt += 1;
+        if (cnt > colors.length) {
+          cnt = 1;
+        }
+        div.textContent = cnt;
+        div.style[setStyle] = colors[cnt - 1];
+      };
+      div.addEventListener('click', nextColor);
+      nextColor();
+      const radios = document.querySelectorAll('input');
+      for (const btn of radios) {
+        btn.addEventListener('change', () => {
+          if (btn.checked) {
+            setStyle = btn.value;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

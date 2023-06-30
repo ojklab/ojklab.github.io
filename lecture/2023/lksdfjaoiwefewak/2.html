@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2</title>
+  </head>
+
+  <body>
+    <button>実行</button>
+    <ul>
+      <li>イヌ</li>
+      <li id="saru">サル</li>
+      <li>キジ</li>
+    </ul>
+    <ul>
+      <li>桃太郎</li>
+      <li>おじいさん</li>
+      <li>おばあさん</li>
+    </ul>
+
+    <script>
+      document.oncontextmenu = () => false;
+      document.querySelector('button').addEventListener(
+        'click',
+        () => {
+          const ul = document.querySelectorAll('ul')[0];
+          const momo = ul.nextElementSibling.firstElementChild;
+          momo.textContent = '桃次郎';
+          const saru = document.getElementById('saru');
+          const oni = document.createElement('li');
+          oni.textContent = 'オニ';
+          ul.replaceChild(oni, saru);
+        },
+        { once: true }
+      );
+    </script>
+  </body>
+</html>

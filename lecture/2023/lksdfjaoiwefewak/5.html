@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>5</title>
+    <style>
+      p {
+        width: 200px;
+        height: 80px;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 80px;
+        border: solid 5px gray;
+        user-select: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>
+      <label><input type="checkbox" /> Hello World!!</label>
+    </p>
+    <button>背景色の変更</button>
+
+    <script>
+      document.oncontextmenu = () => false;
+
+      const box = document.querySelector('input');
+      const p = box.parentElement.parentElement;
+      box.addEventListener('change', (event) => {
+        if (box.checked) {
+          p.style.borderColor = 'gold';
+        } else {
+          p.style.borderColor = 'gray';
+        }
+      });
+      const button = document.querySelector('button');
+      const makeBlue = () => {
+        p.style.backgroundColor = 'cornflowerblue';
+        button.disabled = true;
+      };
+      button.addEventListener('click', makeBlue);
+    </script>
+  </body>
+</html>

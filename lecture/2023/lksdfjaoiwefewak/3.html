@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>3</title>
+    <style>
+      p {
+        width: 300px;
+        height: 100px;
+        background-color: navy;
+        text-align: center;
+      }
+
+      a {
+        color: white;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>実行</button>
+    <p>
+      <a href="https://zenn.dev/ojk?tab=books" taget="_blank" id="link">Online Text</a>
+    </p>
+
+    <ul></ul>
+
+    <script>
+      document.oncontextmenu = () => false;
+      document.querySelector('button').addEventListener(
+        'click',
+        () => {
+          const a = document.querySelector('a');
+          a.rel = 'noopener';
+          a.removeAttribute('id');
+          a.style.textDecoration = 'none';
+          const ul = document.querySelector('ul');
+          for (const atb of a.attributes) {
+            const li = document.createElement('li');
+            li.textContent = atb.name + ' → ' + atb.value;
+            ul.appendChild(li);
+          }
+        },
+        { once: true }
+      );
+    </script>
+  </body>
+</html>

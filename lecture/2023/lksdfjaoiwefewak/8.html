@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>8</title>
+    <style>
+      div {
+        width: 300px;
+        padding: 1rem;
+        border: solid 2px royalblue;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      p {
+        width: 300px;
+        padding: 1rem;
+        border: solid 2px coral;
+      }
+
+      button {
+        padding: 5px 10px;
+      }
+
+      button#submit {
+        background-color: azure;
+      }
+
+      button#reload {
+        background-color: blanchedalmond;
+      }
+
+      button#reset {
+        background-color: honeydew;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <label><input type="checkbox" value="A" /> A</label>
+      <label><input type="checkbox" value="B" /> B</label>
+      <label><input type="checkbox" value="C" /> C</label>
+    </div>
+    <button id="submit">記録</button>&nbsp; <button id="reset">リセット</button>
+    <p></p>
+
+    <script>
+      document.oncontextmenu = () => false;
+      const storage = sessionStorage;
+      let data = [];
+      const boxes = document.querySelectorAll('input');
+      for (const box of boxes) {
+        box.addEventListener('change', () => {
+          if (box.checked) {
+            data.push(box.value);
+          }
+        });
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        // const storedData = storage.data || '未設定です';
+        const storedData = storage.getItem('data') || '未設定です';
+        const p = document.querySelector('p');
+        p.textContent = storedData;
+      });
+      document.getElementById('submit').addEventListener('click', () => {
+        storage.data = JSON.stringify(data);
+        location.reload();
+      });
+      document.getElementById('reset').addEventListener('click', () => {
+        delete storage.data;
+        location.reload();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>4</title>
+    <style>
+      div {
+        margin-bottom: 1rem;
+      }
+
+      .base {
+        box-sizing: border-box;
+        width: 300px;
+        text-align: center;
+        padding: 1rem;
+        margin: 1rem;
+      }
+
+      .border {
+        border: solid 2px coral;
+      }
+
+      .background {
+        background-color: coral;
+      }
+
+      span {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button>実行</button>
+    <p><span>class: </span></p>
+    <div class="base border">装飾してね</div>
+
+    <script>
+      document.oncontextmenu = () => false;
+      document.querySelector('button').addEventListener(
+        'click',
+        () => {
+          const div = document.querySelector('div');
+          div.classList.remove('border');
+          div.className = 'base background';
+          const p = document.querySelector('p');
+          const a = document.querySelector('a');
+          const text = document.createTextNode(div.className);
+          p.appendChild(text);
+        },
+        { once: true }
+      );
+    </script>
+  </body>
+</html>

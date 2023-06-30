@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>1</title>
+  </head>
+  <body>
+    <button>実行</button>
+    <ul>
+      <li>あ</li>
+      <li class="katakana">イ</li>
+      <li>う</li>
+      <li class="katakana">エ</li>
+      <li>お</li>
+    </ul>
+    <h1>ひらがな</h1>
+    <h1>カタカナ</h1>
+    <h1>漢字</h1>
+
+    <script>
+      document.oncontextmenu = () => false;
+      document.querySelector('button').addEventListener(
+        'click',
+        () => {
+          const h1s = document.querySelectorAll('h1');
+          const ul = document.createElement('ul');
+          document.body.insertBefore(ul, h1s[1].nextElementSibling);
+          const kanas = document.querySelectorAll('li:nth-child(even)');
+          for (const k of Array.from(kanas)) {
+            ul.appendChild(k);
+          }
+        },
+        { once: true }
+      );
+    </script>
+  </body>
+</html>
