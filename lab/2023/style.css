@@ -5,10 +5,20 @@ body {
 
 h1 {
   margin-top: 0;
+  background-color: royalblue;
+  padding: 1em;
+  padding-top: 0.5em;
+  color: white;
 }
 
 h1 span {
   font-size: 0.5em;
+}
+
+h2 {
+  background-color: rosybrown;
+  color: white;
+  padding: 0.5em;
 }
 
 div#container {
@@ -33,5 +43,3 @@ a img {
 .abstract img {
   height: 250px;
 }
-
-^
