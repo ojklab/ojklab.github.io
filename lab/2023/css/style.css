@@ -4,12 +4,11 @@
 }
 
 body {
-  font-family: "Zen Maru Gothic", sans-serif;
+  font-family: 'Zen Maru Gothic', sans-serif;
   width: auto;
   color: #3f5563;
   letter-spacing: 0.05em;
   background-color: white;
-  text-align: center;
   margin-left: auto;
   margin-right: auto;
   overflow-x: hidden;
@@ -40,15 +39,17 @@ a {
 
 /*ヘッダー*/
 header {
-  height: 70px;
   position: fixed;
   width: 100%;
+  box-sizing: border-box;
   background-color: #eaeff3;
   box-shadow: 0 5px 10px -6px #3f5563;
+  padding: 15px 30px 20px;
+  text-align: center;
   display: flex;
-  align-items: center;
+  gap: 30px;
   justify-content: space-between;
-  padding: 0px 30px;
+  word-break: keep-all;
 }
 
 header p {
@@ -56,36 +57,17 @@ header p {
   font-weight: bold;
 }
 
-header h1 {
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
-  color: #3f5563;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 0.5;
-  margin-right: 20px;
-  letter-spacing: 0.05em;
-}
-
-header h1 a {
-  color: #3f5563;
-}
-
 nav ul {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
+  gap: 20px;
   list-style: none;
-  margin-right: 60px;
-}
-
-nav li:not(:last-child) {
-  margin-right: 40px;
 }
 
 nav li a {
-  position: relative;
   font-size: 18px;
   font-weight: bold;
-  display: inline-block;
+  display: block;
   transition: 0.3s;
   letter-spacing: 0.05em;
   color: #3f5563;
@@ -99,73 +81,55 @@ nav li a:hover {
   color: rosybrown;
 }
 
+div.container {
+  max-width: 900px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
 /* トップ */
 
-.top {
-  background-color: #fafdff;
+section.top {
+  padding-top: 130px;
   text-align: center;
-  padding-top: 100px;
-}
-
-.top-text {
   color: #b5d3d7;
+  max-width: 900px;
+  padding: 110px 2em 1em;
+  box-sizing: border-box;
 }
 
-.top-text p {
+.top p {
   display: inline-block;
-  width: 900px;
   color: #3f5563;
   text-align: left;
 }
 
-.top img {
-  height: 50px;
-}
-
-h1 {
-  font-family: "Zen Kaku Gothic Antique", sans-serif;
+.top h1 {
+  font-family: 'Zen Kaku Gothic Antique', sans-serif;
   font-size: 48px;
   margin-bottom: 35px;
+  margin-top: 35px;
+}
+
+.top img {
+  width: 100%;
+}
+
+.abstract {
+  text-align: center;
 }
 
 .abstract h1 {
   margin-bottom: 35px;
   margin-top: 100px;
-
-}
-
-.abstract img{
-  margin: 25px;
-}
-
-.top h2 {
-  font-size: 24px;
-  margin-top: 20px;
-}
-
-.title {
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-.top img {
-  width: auto;
-  height: 500px;
-  margin-top: 50px;
-}
-
-.top-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.abstract {
-  display: inline-block;
 }
 
 .abstract img {
-  height: 300px;
+  margin-bottom: 25px;
+}
+
+.abstract img {
+  width: 90%;
 }
 
 /* fotter */
