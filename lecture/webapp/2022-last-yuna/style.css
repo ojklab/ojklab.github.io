@@ -1,0 +1,173 @@
+body {
+  width: 800px;
+  margin: 15px auto;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#app {
+  padding: 0 20px 10px;
+}
+
+nav ul {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  width: 100px;
+  text-align: center;
+  background-color: rgb(80, 203, 255);
+  border-radius: 10px;
+  color: white;
+  padding: 2px;
+  cursor: pointer;
+}
+
+header {
+  background-color: royalblue;
+  height: 75px;
+}
+
+header h1 {
+  color: white;
+  text-align: center;
+  line-height: 75px;
+  margin: 0;
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+form button {
+  color: white;
+  background-color: royalblue;
+  border-style: none;
+  padding: 2px 5px;
+  line-height: 22px;
+  margin-left: 5px;
+}
+
+form + p {
+  color: royalblue;
+  font-weight: bold;
+  border-bottom: solid 3px royalblue;
+  margin-top: 16px;
+}
+
+form + p + ul {
+  padding-left: 2px;
+  margin-top: 0;
+}
+
+form + p + ul li {
+  list-style-type: none;
+}
+
+form + p + ul li::before {
+  content: "📝 ";
+}
+
+/* 1 */
+
+#clothlist {
+  padding-top: 30px;
+  padding-left: 50px;
+  width: 700px;
+  height: 230px;
+  background-color: rgb(212, 239, 239);
+  display: flex;
+  justify-content: baseline;
+  margin: 50px 0;
+}
+#clothlist img {
+  width: 200px;
+  margin: right;
+  margin-right: 100px;
+}
+.clothlist1 {
+  width: 400px;
+}
+
+/* 2 */
+.orderimg {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+#orderall {
+  background-color: rgb(212, 239, 239);
+  margin: 50px;
+  padding: 30px;
+}
+#question {
+  width: 55%;
+  margin: auto;
+}
+#orderdetail {
+  background-color: rgb(212, 239, 239);
+  width: 50%;
+  margin: auto;
+}
+.buylist1 {
+  width: 330px;
+  margin: 10px;
+  background-color: rgb(212, 239, 239);
+  float: left;
+}
+.buylist2 {
+  width: 330px;
+  margin: 10px;
+  background-color: rgb(212, 239, 239);
+  float: left;
+}
+.buylist1 img {
+  width: 200px;
+  margin: 5px 50px;
+  display: flex;
+  justify-content: center;
+}
+.buylist2 img {
+  width: 200px;
+  margin: 5px 50px;
+  display: flex;
+  justify-content: center;
+}
+.matomari {
+  margin-left: 35px;
+}
+#buybutton {
+  margin: 20px;
+  clear: both;
+  margin-left: 330px;
+  margin-right: 300px;
+  font-size: 25px;
+  background-color: aqua;
+}
+/* 3 */
+#tytle {
+  border-bottom: solid 2px royalblue;
+  color: royalblue;
+  font-weight: bold;
+  font-size: 30px;
+  width: 50%;
+  margin-left: 25%;
+}
+#top {
+  margin-top: 20px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+.center {
+  text-align: center;
+}
+footer {
+  font-size: 0.8em;
+  color: white;
+  background-color: royalblue;
+  text-align: center;
+  padding: 10px;
+}

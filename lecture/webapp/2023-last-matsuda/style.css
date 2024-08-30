@@ -1,0 +1,260 @@
+body {
+  background-color: #f7f7f7;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10%;
+  margin-top: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header li {
+  margin-right: 30px;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+header a:hover {
+  color: #3498db;
+}
+
+#setsumei {
+  background-color: #3498db;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#sentaku {
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#cart {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+#cart ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+#cart li {
+  flex: 0 0 auto;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+#cart img {
+  max-width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 8px 8px 0 0;
+}
+
+#cart p {
+  margin: 10px;
+}
+
+#cart_name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#cart button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0 0 8px 8px;
+}
+
+#cart button:hover {
+  background-color: #c0392b;
+}
+
+#cart li:hover {
+  transform: scale(1.05);
+}
+
+#kekka {
+  margin-bottom: 20px;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.pagel {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.pagel:hover {
+  text-decoration: underline;
+}
+
+.cart-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px;
+  border-radius: 0;
+  margin: 0;
+  text-align: center;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.cart-message.hidden {
+  top: -50px;
+}
+
+/* 料理ページ↓ */
+#cook main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+#cook h1 {
+  color: #333;
+}
+
+#cook input {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#cook p {
+  color: #555;
+}
+
+#cook img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* indexページ */
+#index main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.cooking-button,
+.convenience-button {
+  display: inline-block;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: 20px 0;
+}
+
+.cooking-button img,
+.convenience-button img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.cooking-button:hover,
+.convenience-button:hover {
+  transform: scale(1.05);
+}
+
+.cooking-button h1,
+.convenience-button h1 {
+  font-size: 24px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.cooking-button p,
+.convenience-button p {
+  color: #555;
+  font-size: 16px;
+  margin: 10px 0;
+}

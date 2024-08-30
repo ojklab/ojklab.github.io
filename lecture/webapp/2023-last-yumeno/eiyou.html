@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>栄養クイズ</h1>
+    </header>
+    <main>
+    <div class="flex">
+      <div class="block1">
+        <p>
+          1) 「大根」と「切り干し大根」。 栄養価が高いのはどっちでしょうか？
+        </p>
+        <input type="radio" name="box" v-model="box" value="大根" />1. 大根<br />
+        <input type="radio" name="box" v-model="box" value="切り干し大根" />2.
+        切り干し大根<br />
+        <input type="radio" name="box" v-model="box" value="変わらない" />3.
+        変わらない
+      </div>
+      <div :style="myStyle">
+        <p>
+          答え:2. 切り干し大根<br />
+          切り干し大根は栄養価が凝縮されるため、通常の大根と比べてカルシウムは50倍、食物繊維は15倍にもなります。
+        </p>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="block2">
+        <p>
+          2) たんぱく質が豊富に含まれている大豆は「畑の〇」と呼ばれています。
+          何が当てはまるでしょうか？
+        </p>
+        <input type="radio" name="box2" v-model="box2" value="魚" />1. 魚<br />
+        <input type="radio" name="box2" v-model="box2" value="肉" />2. 肉<br />
+        <input type="radio" name="box2" v-model="box2" value="米" />3. 米<br />
+      </div>
+      <div class="block2-2" :style="myStyle">
+        <p>答え:2. 肉</p>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="block3">
+        <p>
+          3)
+          DHAという脳の働きを良くする効果が期待できる栄養素は何に多く含まれているでしょうか？
+          。
+        </p>
+        <input type="radio" name="box3" v-model="box3" value="青魚" />1. 青魚<br />
+        <input type="radio" name="box3" v-model="box3" value="緑黄色野菜" />2.
+        緑黄色野菜<br />
+        <input type="radio" name="box3" v-model="box3" value="お米" />3. お米<br />
+      </div>
+      <div class="block3-2" :style="myStyle">
+        <p>
+          答え:1. 青魚<br />
+          DHAは体内で作ることができない不飽和脂肪酸の１つです。記憶力や学習能力を高める効果があることから、日ごろから摂取することで認知症の予防にも効果が期待されています。
+          さらに、血圧を下げる効果もあるため脳卒中予防も期待できます。
+        </p>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="block4">
+        <p>4)ビタミンAが不足するとどうなるでしょうか？</p>
+      </div>
+
+      <input type="radio" name="box4" v-model="box4" value="口内炎" />1.
+      口内炎が治りにくくなる<br />
+      <input type="radio" name="box4" v-model="box4" value="骨折" />2.
+      骨折しやすくなる<br />
+
+      <input type="radio" name="box4" v-model="box4" value="寝つき" />3.
+      寝つきが悪くなる<br />
+      <div :style="myStyle">
+        <p>答え:1. 口内炎が治りにくくなる</p>
+      </div>
+    </div>
+
+    <div class="flex">
+      <div class="block5">
+        <p>5) 鉄分が不足するとどうなるでしょうか？</p>
+      </div>
+
+      <input type="radio" name="box5" v-model="box5" value="太りやすくなる" />1.
+      太りやすくなる<br />
+      <input type="radio" name="box5" v-model="box5" value="貧血" />2.
+      貧血になる<br />
+
+      <input type="radio" name="box5" v-model="box5" value="鼻血" />3.
+      鼻血が出やすくなる<br />
+      <div :style="myStyle">
+        <p>答え:2. 貧血になる</p>
+      </div>
+    </div>
+
+    <div class="block6">
+      <p>6) この中でビタミンCが一番たくさん入っている果物はどれでしょうか？</p>
+      <input type="radio" name="box6" v-model="box6" value="りんご" />1.
+      りんご<br />
+      <input type="radio" name="box6" v-model="box6" value="レモン" />2.
+      レモン<br />
+
+      <input type="radio" name="box6" v-model="box6" value="キウイ" />3.
+      キウイ<br />
+      <div :style="myStyle">
+        <p>
+          答え:3. キウイ<br />ビタミンCといえばレモンのイメージがあるかもしれませんが、この中で一番ビタミンCが多いのはキウイです。ビタミンCには皮膚や粘膜を丈夫にしたり、免疫を強くして風邪をひきにくくする効果があります。
+        </p>
+      </div>
+    </div>
+
+    <div class="block7">
+      <p>7) カルシウムが不足するとなる可能性が高まる病気はなんでしょうか？</p>
+      <input
+        type="radio"
+        name="box7"
+        v-model="box7"
+        value="アルコール依存症"
+      />1. アルコール依存症<br />
+      <input type="radio" name="box7" v-model="box7" value="骨粗しょう症" />2.
+      骨粗しょう症<br />
+
+      <input type="radio" name="box7" v-model="box7" value="認知症" />3.
+      認知症<br />
+      <div :style="myStyle">
+        <p>答え:2. 骨粗しょう症</p>
+      </div>
+    </div>
+
+    <div class="block8">
+      <p>8) カルシウムの吸収を助けてくれる栄養素はなんでしょうか？</p>
+      <input
+        type="radio"
+        name="box8"
+        v-model="box8"
+        value="ビタミンD"
+      />1.ビタミンD<br />
+      <input
+        type="radio"
+        name="box8"
+        v-model="box8"
+        value="炭水化物"
+      />2.炭水化物<br />
+
+      <input
+        type="radio"
+        name="box8"
+        v-model="box8"
+        value="コレステロール"
+      />3.コレステロール<br />
+      <div :style="myStyle">
+        <p>答え:1. ビタミンD</p>
+      </div>
+    </div>
+
+    <div class="block9">
+      <p>
+        9)
+        トマトに多く含まれる「リコピン」には、ある病気を予防する効果があるとされています。
+        その病気とはなんでしょうか？
+      </p>
+      <input type="radio" name="box9" v-model="box9" value="がん" />1. がん<br />
+      <input type="radio" name="box9" v-model="box9" value="白内障" />2.
+      白内障<br />
+
+      <input type="radio" name="box9" v-model="box9" value="脳梗塞" />3.
+      脳梗塞<br />
+      <div :style="myStyle">
+        <p>答え:1. がん</p>
+      </div>
+    </div>
+
+    <div class="block10">
+      <p>
+        10)
+        カルシウムには骨を強くする力があります。では次のうち、カルシウムがたくさん入っている食べ物はどれでしょうか？
+      </p>
+      <input type="radio" name="box10" v-model="box10" value="チーズ" />1.
+      チーズ<br />
+      <input type="radio" name="box10" v-model="box10" value="みかん" />2.
+      みかん<br />
+      <input type="radio" name="box10" v-model="box10" value="鶏肉" />3. 鶏肉<br />
+      <div :style="myStyle">
+        <p>答え:1. チーズ</p>
+      </div>
+    </div>
+    <div class="right">
+    <h2>{{message}}</h2>
+    <h1>点数：{{score}}/100</h1>
+    </div>
+  </main>
+    <footer>
+      <button type="button" onclick="location.href='home.html'">戻る</a>
+      <button @click="method" :disabled="scored" class="footer">
+        結果発表
+      </button>
+    </footer>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

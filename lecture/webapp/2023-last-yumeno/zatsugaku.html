@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>食べ物に関する雑学クイズ</h1>
+    </header>
+    <main>
+      <div class="block1">
+        <p>
+          1)
+          世界三大珍味といわれているのはフォアグラとキャビアとあともう一つは何でしょうか？
+        </p>
+        <input type="radio" name="box21" v-model="box21" value="アワビ" />1.
+        アワビ<br />
+        <input type="radio" name="box21" v-model="box21" value="トリュフ" />2.
+        トリュフ<br />
+        <input type="radio" name="box21" v-model="box21" value="カラスミ" />3.
+        カラスミ<br />
+        <input type="radio" name="box21" v-model="box21" value="ツバメの巣" />2.
+        ツバメの巣
+        <div :style="myStyle">
+          <p>答え:2. トリュフ</p>
+        </div>
+      </div>
+
+      <div class="block2">
+        <p>
+          2)
+          ステーキの名前でよく聞く「サーロイン」。牛の体のどこの部分のお肉でしょうか？
+        </p>
+        <input
+          type="radio"
+          name="box22"
+          v-model="box22"
+          value="おなか"
+        />1.おなか<br />
+        <input
+          type="radio"
+          name="box22"
+          v-model="box22"
+          value="こし"
+        />2.こし<br />
+        <input
+          type="radio"
+          name="box22"
+          v-model="box22"
+          value="ふともも"
+        />3.ふともも
+        <div :style="myStyle">
+          <p>答え:2.こし</p>
+        </div>
+      </div>
+
+      <div class="block3">
+        <p>3) お肉の「ハツ」とはどこの部分のことでしょうか？</p>
+        <input type="radio" name="box23" v-model="box23" value="胃" />1.胃<br />
+        <input
+          type="radio"
+          name="box23"
+          v-model="box23"
+          value="肝臓"
+        />2.肝臓<br />
+        <input type="radio" name="box23" v-model="box23" value="心臓" />3.心臓
+        <div :style="myStyle">
+          <p>答え:3.心臓</p>
+        </div>
+      </div>
+
+      <div class="block4">
+        <p>4) お肉の臭みを消してくれるスパイスはどれでしょうか？</p>
+        <input
+          type="radio"
+          name="box24"
+          v-model="box24"
+          value="コリアンダー"
+        />1.コリアンダー
+        <br />
+        <input
+          type="radio"
+          name="box24"
+          v-model="box24"
+          value="ローリエ"
+        />2.ローリエ<br />
+        <input
+          type="radio"
+          name="box24"
+          v-model="box24"
+          value="ナツメグ"
+        />3.ナツメグ
+        <div :style="myStyle">
+          <p>答え:3.ナツメグ</p>
+        </div>
+      </div>
+
+      <div class="block5">
+        <p>
+          5)北海道にはジンギスカンという肉料理があります。何のお肉が使われた料理でしょうか？
+        </p>
+        <input type="radio" name="box25" v-model="box25" value="羊肉" />1.羊肉
+        <br />
+        <input
+          type="radio"
+          name="box25"
+          v-model="box25"
+          value="やぎ肉"
+        />2.やぎ肉<br />
+        <input type="radio" name="box25" v-model="box25" value="鴨肉" />3.鴨肉
+        <div :style="myStyle">
+          <p>答え:1.羊肉</p>
+        </div>
+      </div>
+
+      <div class="block6">
+        <p>
+          6)
+          蒲焼きや白焼きで多くの人に愛されている「ウナギ」。その「ウナギ」を生で食べない理由は何でしょうか？
+        </p>
+        <input
+          type="radio"
+          name="box26"
+          v-model="box26"
+          value="毒"
+        />1.生で食べると毒があるから
+        <br />
+        <input
+          type="radio"
+          name="box26"
+          v-model="box26"
+          value="ヤケド"
+        />2.生で食べるとヤケドしてしまうから<br />
+        <input
+          type="radio"
+          name="box26"
+          v-model="box26"
+          value="食べたことない"
+        />3.生で食べたことがないから
+        <div :style="myStyle">
+          <p>答え:1.生で食べると毒があるから</p>
+        </div>
+      </div>
+
+      <div class="block7">
+        <p>7) 「おかき」と「せんべい」の違いは何でしょうか？</p>
+        <input type="radio" name="box27" v-model="box27" value="重さ" />1.重さ
+        <br />
+        <input
+          type="radio"
+          name="box27"
+          v-model="box27"
+          value="大きさ"
+        />2.大きさ<br />
+        <input type="radio" name="box27" v-model="box27" value="原料" />3.原料
+        <div :style="myStyle">
+          <p>
+            答え:3.原料<br />
+            もち米で作られたのが「おかき」で、うるう米で作られたものが「せんべい」となっています。
+          </p>
+        </div>
+      </div>
+
+      <div class="block8">
+        <p>8) 数ある食べ物の中で、唯一「腐らない」のはどれでしょうか</p>
+        <input type="radio" name="box28" v-model="box28" value="味噌" />1.味噌
+        <br />
+        <input
+          type="radio"
+          name="box28"
+          v-model="box28"
+          value="はちみつ"
+        />2.はちみつ<br />
+        <input type="radio" name="box28" v-model="box28" value="酢" />3.酢
+        <div :style="myStyle">
+          <p>
+            答え:2.はちみつ<br />
+            はちみつは、糖度が高い上に水分が非常に少なく、酸性度が高いので微生物が繁殖しないため腐らない。
+          </p>
+        </div>
+      </div>
+
+      <div class="block9">
+        <p>9) 「料理のさしすせそ」の「そ」はどれでしょうか</p>
+        <input type="radio" name="box29" v-model="box29" value="味噌" />1.味噌
+        <br />
+        <input
+          type="radio"
+          name="box29"
+          v-model="box29"
+          value="はちみつ"
+        />2.はちみつ<br />
+        <input type="radio" name="box29" v-model="box29" value="酢" />3.酢
+        <div :style="myStyle">
+          <p>
+            答え:2.はちみつ<br />
+            はちみつは、糖度が高い上に水分が非常に少なく、酸性度が高いので微生物が繁殖しないため腐らない。
+          </p>
+        </div>
+      </div>
+
+      <div class="block10">
+        <p>
+          10)お菓子などでよく見かける「サラダ味」の「サラダ」は、何のことを指しているでしょうか？
+        </p>
+        <input
+          type="radio"
+          name="box30"
+          v-model="box30"
+          value="野菜"
+        />1.野菜たっぷりの「サラダ」
+        <br />
+        <input
+          type="radio"
+          name="box30"
+          v-model="box30"
+          value="地名"
+        />2.地名の「サラダ」<br />
+        <input
+          type="radio"
+          name="box30"
+          v-model="box30"
+          value="サラダ油"
+        />3.サラダ油の「サラダ」
+        <div :style="myStyle">
+          <p>
+            答え:3.サラダ油の「サラダ」<br />
+            一般的にはサラダ油をからめて塩で味付けしたものを「サラダ味」と言います。
+            サラダなど、火を通さない料理にも使える食用油だから「サラダ油」と言うそうです。
+          </p>
+        </div>
+        <div class="right">
+          <h2>{{message}}</h2>
+          <h1>点数：{{score}}/100</h1>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <button type="button" onclick="location.href='home.html'">戻る</a>
+      <button @click="method" :disabled="scored" class="footer">
+        結果発表
+      </button>
+    </footer>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

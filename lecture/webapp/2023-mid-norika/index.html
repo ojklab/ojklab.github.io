@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>設計演習_中間課題</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,100&family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>ドーナツの値段＆カロリー管理</h1>
+
+    <!-- 予算の入力フィールド -->
+    <p>① 予算：{{budget}}円</p>
+    <p>② 理想摂取カロリー数：{{calorie}}kcal</p>
+    <p>
+      <label
+        ><input
+          type="text"
+          v-model="budget"
+          size="18"
+          placeholder="予算を入力してください"
+      /></label>
+    </p>
+    <p>
+      <label
+        ><input
+          type="text"
+          v-model="calorie"
+          size="32"
+          placeholder="理想摂取カロリー数を入力してください"
+      /></label>
+    </p>
+
+    <!-- ドーナツの一覧 -->
+    <h2>ポン・デ・リング</h2>
+    <div class="pon">
+      <div>
+        <p>ポン・デ・リング</p>
+        <p>151円/217kcal</p>
+        <img src="img/pon_de_ring.jpg" alt="ポン・デ・リング" />
+        <button @click="PonDeRing">追加</button>
+      </div>
+
+      <div>
+        <p>ポン・デ・黒糖</p>
+        <p>151円/202kcal</p>
+        <img src="img/pon_Kokutou.jpg" alt="ポン・デ・黒糖" />
+        <button @click="Pon_Kokutou">追加</button>
+      </div>
+
+      <div>
+        <p>ポン・デ・ストロベリー</p>
+        <p>162円/246kcal</p>
+        <img src="img/pon_berry.jpg" alt="ポン・デ・ストロベリー" />
+        <button @click="pon_berry">追加</button>
+      </div>
+    </div>
+
+    <h2>オールドファッション</h2>
+    <div class="old">
+      <div>
+        <p>オールドファッション</p>
+        <p>151円/293kcal</p>
+        <img src="img/old_fashion.jpg" alt="オールドファッション" />
+        <button @click="old_fashion">追加</button>
+      </div>
+
+      <div>
+        <p>チョコファッション</p>
+        <p>162円/330kcal</p>
+        <img src="img/choko_fashion.jpg" alt="チョコファッション" />
+        <button @click="choco_fashion">追加</button>
+      </div>
+
+      <div>
+        <p>オールドファッションハニー</p>
+        <p>162円/355kcal</p>
+        <img src="img/old_honey.jpg" alt="オールドファッションハニー" />
+        <button @click="old_honey">追加</button>
+      </div>
+    </div>
+
+    <h2>フレンチクルーラー</h2>
+    <div class="fre">
+      <div>
+        <p>フレンチクルーラー</p>
+        <p>151円/154kcal</p>
+        <img src="img/french.jpg" alt="フレンチクルーラー" />
+        <button @click="french">追加</button>
+      </div>
+
+      <div>
+        <p>エンゼルフレンチ</p>
+        <p>162円/192kcal</p>
+        <img src="img/angel.jpg" alt="エンゼルフレンチ" />
+        <button @click="angel">追加</button>
+      </div>
+
+      <div>
+        <p>ストロベリーフレンチカスタード</p>
+        <p>162円/197kcal</p>
+        <img src="img/french_berry.jpg" alt="ストロベリーフレンチカスタード" />
+        <button @click="french_berry">追加</button>
+      </div>
+    </div>
+
+    <h2>イーストドーナツ</h2>
+    <div class="east1">
+      <div>
+        <p>ハニーディップ</p>
+        <p>151円/202kcal</p>
+        <img src="img/east_honey.jpg" alt="ハニーディップ" />
+        <button @click="east_honey">追加</button>
+      </div>
+
+      <div>
+        <p>シュガーレイズド</p>
+        <p>151円/192kcal</p>
+        <img src="img/east_sugar.jpg" alt="シュガーレイズド" />
+        <button @click="east_sugar">追加</button>
+      </div>
+
+      <div>
+        <p>チョコリング</p>
+        <p>162円/238kcal</p>
+        <img src="img/east_choco.jpg" alt="チョコリング" />
+        <button @click="east_choco">追加</button>
+      </div>
+    </div>
+
+    <div class="east2">
+      <div>
+        <p>ストロベリーリング</p>
+        <p>162円/239kcal</p>
+        <img src="img/east_berry.jpg" alt="ストロベリーリング" />
+        <button @click="east_berry">追加</button>
+      </div>
+
+      <div>
+        <p>エンゼルクリーム</p>
+        <p>162円/201kcal</p>
+        <img src="img/east_angel.jpg" alt="エンゼルクリーム" />
+        <button @click="east_angel">追加</button>
+      </div>
+
+      <div>
+        <p>カスタードクリーム</p>
+        <p>162円/214kcal</p>
+        <img src="img/east_castard.jpg" alt="カスタードクリーム" />
+        <button @click="east_castard">追加</button>
+      </div>
+    </div>
+
+    <h2>チョコレート</h2>
+    <div class="choco1">
+      <div>
+        <p>チョコレート</p>
+        <p>151円/239kcal</p>
+        <img src="img/choco_choco.jpg" alt="チョコレート" />
+        <button @click="choco_choco">追加</button>
+      </div>
+
+      <div>
+        <p>ダブルチョコレート</p>
+        <p>162円/265kcal</p>
+        <img src="img/choco_double.jpg" alt="ダブルチョコレート" />
+        <button @click="choco_double">追加</button>
+      </div>
+
+      <div>
+        <p>ゴールデンチョコレート</p>
+        <p>162円/269kcal</p>
+        <img src="img/choco_golden.jpg" alt="ゴールデンチョコレート" />
+        <button @click="choco_golden">追加</button>
+      </div>
+    </div>
+    <div class="choco2">
+      <div>
+        <p>ココナツチョコレート</p>
+        <p>162円/259kcal</p>
+        <img src="img/choco_coconut.jpg" alt="ココナツチョコレート" />
+        <button @click="choco_coconut">追加</button>
+      </div>
+    </div>
+
+    <div class="list">
+      <h2>＜ 追加したドーナツ一覧 ＞</h2>
+
+      <ul>
+        <!-- chatGPT使用 -->
+        <li v-for="(item, index) in donuts">
+          {{ item }}
+          <button @click="removeDonut(index)">削除</button>
+        </li>
+      </ul>
+
+      <p>合計個数: {{ totalDonuts }}個</p>
+      <p>支払い額：{{money}}円</p>
+      <p>カロリー：{{kcal}}kcal</p>
+      <br />
+      <button @click="check_budget" class="button_design1">確定</button>
+      <button @click="resetForm" class="button_design2">リセット</button>
+    </div>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

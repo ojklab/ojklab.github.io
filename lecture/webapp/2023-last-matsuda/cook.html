@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>フードアシスト</title>
+  </head>
+  <body v-cloak @vue:mounted="init" id="cook">
+    <header>
+      <ul>
+        <li><a href="cook.html">料理を作る</a></li>
+        <li><a href="convenience.html">コンビニで買う</a></li>
+        <li><a href="index.html">ホーム</a></li>
+      </ul>
+    </header>
+    <main>
+      <div id="setsumei">
+        料理の種類と使用する材料、最高カロリー、最低タンパク質量を半角英数字で入力してください。<br />
+        （例：pasta pan rice 等）
+      </div>
+      <p>種類</p>
+      <input v-model="nquery" @input="onFormChange" /> <br />
+      <p>使用する材料</p>
+      <input v-model="nincludeIngredients" @input="onFormChange" /> <br />
+      <p>最高カロリー(kcal)</p>
+      <input type="number" v-model="nmaxCalories" @input="onFormChange" />
+      <p>最低タンパク質量(g)</p>
+      <input type="number" v-model="nminProtein" @input="onFormChange" /> <br />
+      <p>最高炭水化物量(g)</p>
+      <input type="number" v-model="nmaxCarbs" @input="onFormChange" /> <br />
+      <p>最高脂質量(g)</p>
+      <input type="number" v-model="nmaxFat" @input="onFormChange" /> <br />
+      <p>国</p>
+      <input v-model="ncuisine" @input="onFormChange" /> <br />
+
+      <h1 v-if="data">{{data.title}}</h1>
+      <img :src="data.image" />
+      <p v-if="data">カロリー：{{data.nutrition.nutrients[0].amount}}㎉</p>
+      <p v-if="data">タンパク質：{{data.nutrition.nutrients[1].amount}}g</p>
+      <p v-if="data">炭水化物：{{data.nutrition.nutrients[3].amount}}g</p>
+      <p v-if="data">脂質：{{data.nutrition.nutrients[2].amount}}g</p>
+
+      <p>レシピは、料理名をgoogleなどで検索してみてね</p>
+    </main>
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

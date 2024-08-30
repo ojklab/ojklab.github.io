@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="LR">
+    <!-- タスク追加 -->
+    <div class="add">
+      <P class="title">ADD</P>
+      <!-- タスク詳細 -->
+      <div class="detail">
+        <input type="text" v-model="text" required>
+        <div class="LR">
+          <input type="date" v-model="date" required>
+          <div>
+            <input type="button" id="red" @click="color(0)" value="on">
+            <input type="button" id="orange" @click="color(1)" value="on">
+            <input type="button" id="yellow" @click="color(2)" value="on">
+            <input type="button" id="green" @click="color(3)" value="on">
+            <br>
+            <input type="button" id="pink" @click="color(4)" value="on">
+            <input type="button" id="purple" @click="color(5)" value="on">
+            <input type="button" id="blue" @click="color(6)" value="on">
+            <input type="button" id="bluegreen" @click="color(7)" value="on">
+          </div>
+        </div>
+      </div>
+      <!-- タスク追加ボタン -->
+      <button @click="add">＋</button>
+    </div>
+
+    <!-- タスクリスト -->
+    <div class="tasklist">
+      <p class="title">LIST</p>
+      <!-- チェックリスト -->
+      <div class="list">
+        <p class="deadline">今日中（{{today}}　{{day1}}）</p><br>
+        <!-- <input type="checkbox" id="checkbox">
+        <label for="checkbox">タスク名（text）</label><br>
+        <input type="checkbox" id="checkbox">
+        <label for="checkbox">タスク名（text）</label> -->
+        <p class="deadline">明日まで（{{tommorrow}}　{{day2}}）</p><br>
+        <p class="deadline">来週まで（{{next}}　{{day3}}）</p><br>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/petite-vue"></script>
+  <script src="script.js"></script>
+</body>
+</html>

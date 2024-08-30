@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>食べ物に関する脳トレ・漢字クイズ</h1>
+    </header>
+    <main>
+      <div class="block1">
+        <p>
+          1)
+          時々「ねぎに会いたい」と泣いちゃう野菜は何でしょう？平仮名で答えてください
+        </p>
+        <input v-model="text1" />
+        <div :style="myStyle">
+          <p>
+            答え:たまねぎ<br />
+            ときどきは、「たまに」と言い換えることができる。
+          </p>
+        </div>
+      </div>
+
+      <div class="block2">
+        <p>2)「?」に入る数字はなんでしょう？</p>
+        <ul>
+          <li>東京→41</li>
+          <li>自由→34</li>
+          <li>椅子→10</li>
+          <li>果物→??</li>
+        </ul>
+        <input v-model="text2" />
+        <div :style="myStyle">
+          <p>
+            答え:40<br />
+            ときどきは、「たまに」と言い換えることができる。
+          </p>
+        </div>
+      </div>
+
+      <div class="block3">
+        <p>3) 梅干し、さくらんぼ、りんごの仲間になるのはどれでしょう？</p>
+        <ul>
+          <li>体操</li>
+          <li>漫才</li>
+          <li>ダンス</li>
+          <li>手品</li>
+        </ul>
+        <input v-model="text3" />
+        <div :style="myStyle">
+          <p>
+            答え:4. 手品<br />
+            体操・漫才・ダンス・手品のうち、「タネ」があるのは 手品 だけです。
+            （手品にはタネ明かしがあります）よって、答えは「手品」となります。
+          </p>
+        </div>
+      </div>
+
+      <div class="block4">
+        <p>
+          4) ⓵⓶⓷＝「？」の時、「？」に当てはまる食べ物をカタカナで答えてください
+        </p>
+        <ol>
+          <li>カレー→す〇ー⓷</li>
+          <li>ラーメン→⓵〇〇</li>
+          <li>ご飯→し○⓶〇</li>
+        </ol>
+        <input v-model="text4" />
+        <div :style="myStyle">
+          <p>
+            答え:レモン<br />
+            実は右端には左の食べ物を食べる時に使う道具の名前がそれぞれ入ります。「カレー」には「スプーン」、「ラーメン」には「レンゲ」、土鍋のごはんをよそう時には「しゃもじ」を使います。文字を当てはめたら後は〇の位置にある文字を1、2、3の順に読めば「れ」「も」「ン」という答えにたどりつきます。
+          </p>
+        </div>
+      </div>
+
+      <div class="block5">
+        <p>5) ?に当てはまるのは何の食べ物でしょう？漢字で答えてください。</p>
+        <ol>
+          <li>3↑3←=すし</li>
+          <li>5 3←=？</li>
+        </ol>
+
+        <input v-model="text5" />
+        <div :style="myStyle">
+          <p>
+            答え:梨<br />
+            この問題では、数字は「スマホの文字入力画面のボタンの位置」、矢印は「文字を入力するフリックの向き」を表しています。問題文を見ると「3↑」はさ行を上にフリックするので「す」、「3←」はさ行をフリックするので「し」を入力できます。
+          </p>
+        </div>
+      </div>
+
+      <div class="block6">
+        <p>
+          6) これは何の食べ物を表しているでしょうか? 平仮名で答えてください。
+        </p>
+        <ul>
+          <li>ち〇〇〇〇</li>
+          <li>〇〇〇〇〇</li>
+        </ul>
+
+        <input v-model="text6" />
+        <div :style="myStyle">
+          <p>
+            答え:ちくわ<br />
+            「ち」の後に「〇」が9つあって「〇」を「輪」と読み替えて「ち」と「9つの輪」で「ちくわ」になるため、正解はちくわ。
+          </p>
+        </div>
+      </div>
+
+      <div class="block7">
+        <p>7) 〇△▢が表す食べ物は何でしょうか？平仮名で答えてください。</p>
+        <ol>
+          <li>コ〇ツ〇ヒ</li>
+          <li>ジ△ウ△ア</li>
+          <li>カ▢デ▢チ</li>
+        </ol>
+
+        <input v-model="text7" />
+        <div :style="myStyle">
+          <p>
+            答え:うどん<br />
+            実は〇には「う」、△には「ど」、▢には「ん」が入る。文字を入れ替えると上から「コウツウヒ(交通費)」「ジドウドア(自動ドア)」「カンデンチ(乾電池)」となって言葉が成立します。そして〇△▢を繋げると、「うどん」が正解になります。
+          </p>
+        </div>
+      </div>
+
+      <div class="block8">
+        <p>8) 「？」に入る数字は何か？</p>
+        <ol>
+          <li>とうもろこし→4</li>
+          <li>玉ねぎ→5</li>
+          <li>ニンジン→？</li>
+        </ol>
+
+        <input v-model="text8" />
+        <div :style="myStyle">
+          <p>
+            答え:6<br />
+            右の数字は左側にあるイラストを英単語に変換した時のアルファベットの文字数を表しています。とうもろこしは「corn」で「4」、たまねぎは「onion」で「5」となる。にんじんは英単語にすると「carrot」で文字数を数えてみると「6」なので答えは6になる。
+          </p>
+        </div>
+      </div>
+
+      <div class="block9">
+        <p>9) 毎週食べたくなる食べ物は何でしょうか？</p>
+        <input v-model="text9" />
+        <div :style="myStyle">
+          <p>
+            答え:シュウマイ<br />
+            毎週をカタカナにすると「マイシュウ」
+          </p>
+        </div>
+      </div>
+
+      <div class="block10">
+        <p>10)4匹のねずみが集まるとできる食べ物は何でしょうか？</p>
+        <input v-model="text10" />
+        <div :style="myStyle">
+          <p>
+            答え:シチュー<br />
+            ねずみは「チュー」と鳴きます。「4匹のねずみ」→「4+チュー=シチュー」となります。
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <h2>{{message}}</h2>
+        <h1>点数：{{score}}/100</h1>
+      </div>
+    </main>
+    <footer>
+      <button type="button" onclick="history.back()">戻る</button>
+      <button @click="method" :disabled="scored" class="footer">
+        結果発表
+      </button>
+    </footer>
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

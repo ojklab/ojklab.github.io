@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ファッションコーディネーター</title>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body v-cloak>
+    <!-- ヘッダー -->
+    <header>
+      <h1>ファッションコーディネーター👚</h1>
+    </header>
+
+    <!-- アプリ部分 -->
+    <div id="app">
+      <!-- 画面切替 -->
+      <nav>
+        <ul>
+          <li @click="setScreen(1)">選択</li>
+          <li @click="setScreen(2)">オーダー</li>
+          <li @click="setScreen(0)">遊び方</li>
+        </ul>
+      </nav>
+
+      <!-- 画面1 -->
+      <template v-if="screen == 1">
+        <div id="screen1" v-scope="Screen1()"></div>
+      </template>
+
+      <!-- 画面2 -->
+      <template v-else-if="screen == 2">
+        <div id="screen2" v-scope="Screen2()"></div>
+      </template>
+
+      <!-- 画面3 -->
+      <template v-else>
+        <div id="howto" v-scope="Screen3()"></div>
+      </template>
+    </div>
+
+    <footer>-apps-</footer>
+
+    <!-- **テンプレート** -->
+
+    <!-- 画面1 -->
+    <template id="screen1-tmpl">
+      <h2 class="center">洋服リスト</h2>
+      <p class="center">※洋服リストの中からオーダーに合った洋服を探そう！！</p>
+      <p class="center">
+        <select v-model="option">
+          <option selected disabled>選択</option>
+          <option value="price">価格</option>
+          <option value="color">色</option>
+          <option value="look">デザイン</option>
+        </select>
+        が
+        <select v-model="value">
+          <option selected disabled>選択</option>
+          <option value="1000">1000円</option>
+          <option value="1500">1500円</option>
+          <option value="2000">2000円</option>
+          <option value="3000">3000円</option>
+          <option value="4000">4000円</option>
+          <option value="5000">5000円</option>
+          <option value="赤">赤色</option>
+          <option value="青">青色</option>
+          <option value="黄">黄色</option>
+          <option value="緑">緑色</option>
+          <option value="白">白色</option>
+          <option value="茶">茶色</option>
+          <option value="コート">コート</option>
+          <option value="シャツ">シャツ</option>
+          <option value="ブラウス">ブラウス</option>
+          <option value="セーター">セーター</option>
+          <option value="スウェット">スウェット</option>
+          <option value="ワンピース">ワンピース</option>
+        </select>
+        の洋服を<button @click="filtering">選別</button>
+      </p>
+      <hr />
+
+      <dl>
+        <div v-for="clo in selectedclothes" id="clothlist">
+          <div class="clothlist1">
+            <h3>{{clo.type}}</h3>
+            <li>価格：{{clo.price}}円</li>
+            <li>色：{{clo.color}}色</li>
+            <li>デザイン：{{clo.look}}</li>
+            <li>在庫：{{clo.buy}}</li>
+          </div>
+          <div class="clothlist"><img :src="clo.image" /></div>
+        </div>
+      </dl>
+
+      <form @submit.prevent autocomplete="off">
+        <label>
+          メモを取る<br />
+          <input id="selestM" v-model="sMemo" />
+        </label>
+        <button @click="addMatter">入力</button>
+      </form>
+      <p>メモリスト</p>
+      <ul>
+        <li v-for="selestM in store.sMemos">{{selestM}}</li>
+      </ul>
+    </template>
+
+    <!-- 画面2 -->
+    <template id="screen2-tmpl">
+      <h2 class="center">オーダーを聞く</h2>
+      <img src="./img/order.JPG" class="orderimg" />
+      <div id="orderall">
+        <h2 class="center">オーダーをの詳細を聞く</h2>
+
+        <div id="question">
+          <input
+            type="radio"
+            name="orders"
+            v-model="order"
+            value="1"
+          />Q.予算はいくらですか？<br />
+          <input
+            type="radio"
+            name="orders"
+            v-model="order"
+            value="2"
+          />Q.トップスは何色が良いですか？<br />
+          <input
+            type="radio"
+            name="orders"
+            v-model="order"
+            value="3"
+          />Q.トップスのデザインは何が良いですか？<br />
+        </div>
+        <div id="orderdetail">
+          <p v-if="order == 1" class="center">
+            A.{{cost[num]}}円ちょうどでお願いします。
+          </p>
+          <p v-else-if="order == 2" class="center">
+            A.トップスは{{tcolor[num]}}色が良いです。
+          </p>
+          <p v-else-if="order == 3" class="center">
+            A.トップスは{{tlook[num]}}が良いです。
+          </p>
+          <p v-else></p>
+        </div>
+      </div>
+      <br />
+      <h2 class="center">販売する</h2>
+      <div class="matomari">
+        <div class="buylist1">
+          <input
+            type="radio"
+            name="prices"
+            v-model="prices"
+            value="5000"
+          />{{clothstype[5]}}
+          <img :src="clothsimg[5]" />
+        </div>
+        <div class="buylist2">
+          <input
+            type="radio"
+            name="prices"
+            v-model="prices"
+            value="1000"
+          />{{clothstype[0]}}
+          <img :src="clothsimg[0]" />
+        </div>
+        <div class="buylist1">
+          <input
+            type="radio"
+            name="prices"
+            v-model="prices"
+            value="3000"
+          />{{clothstype[3]}}
+          <img :src="clothsimg[3]" />
+        </div>
+        <div class="buylist2">
+          <input
+            type="radio"
+            name="prices"
+            v-model="prices"
+            value="2000"
+          />{{clothstype[2]}}
+          <img :src="clothsimg[2]" />
+        </div>
+        <div class="buylist1">
+          <input
+            type="radio"
+            name="prices"
+            v-model="prices"
+            value="1500"
+          />{{clothstype[1]}}
+          <img :src="clothsimg[1]" />
+        </div>
+        <div class="buylist2">
+          <input
+            type="radio"
+            name="prices"
+            v-model="prices"
+            value="4000"
+          />{{clothstype[4]}}
+          <img :src="clothsimg[4]" />
+        </div>
+      </div>
+      <br />
+      <button @click="buy" class="center" id="buybutton">販売する</button>
+      <img :src="judge" class="orderimg" />
+
+      <form @submit.prevent autocomplete="off">
+        <label>
+          メモを取る<br />
+          <input id="orderM" v-model="oMemo" />
+        </label>
+        <button @click="addPerson">入力</button>
+      </form>
+      <p>メモリスト</p>
+      <ul>
+        <li v-for="orderM in store.oMemos">{{orderM}}</li>
+      </ul>
+    </template>
+
+    <!-- 画面3 -->
+    <template id="howto-tmpl">
+      <p1 class="center" id="tytle">ファッションコーディネーター</p1>
+      <img src="./img/top.JPG" id="top" />
+      <h2 class="center">説明</h2>
+      <p>
+        ファッションコーディネーターはお客様のオーダーに合う洋服を探し出し、お客様に買ってもらえるように洋服を選ぶゲームアプリです。
+        お客様を満足させられるように頑張りましょう！！
+      </p>
+      <h2 class="center">遊び方</h2>
+      <p>
+        ①オーダーのページのオーダーの詳細を聞くの部分からお客様が欲しい物の特徴を聞きます。<br />
+        ➁選択のぺージの洋服リストから聞いたオーダーの内容に当てはまる洋服を探します。<br />
+        ※洋服リストの中には売り切れ商品も紛れているので注意！！<br />
+        ③オーダーのページの販売からお客様のオーダーに当てはまる洋服を販売します。<br />
+        ※オーダーに当てはまらない洋服は販売しても買ってもらえません！！<br />
+        ✨オーダーを聞いて洋服を選別しお客様を満足させましょう！！✨
+      </p>
+    </template>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

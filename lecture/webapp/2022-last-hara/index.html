@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>動画検索</title>
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+  </style>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<header>
+  <h1>Video List</h1>
+
+  <div>
+    <label>channel
+      <select v-model="channel">
+        <option value="UCQ_MqAw18jFTlBB-f8BP7dw">QuizKnock</option>
+        <option value="UCFbp2XdRpKfk7mYt_uT8dxw">Kevin's English Room/掛山ケビ志郎</option>
+        <option value="UC8g17oXkRt8buwQL8GU-NSw">ラムダ技術部</option>
+        <option value="UCG4vehe_lfRQMKJducswRtw">ふっくらすずめクラブ</option>
+      </select>
+    </label>
+    <button @click="getProgramList">表示▼</button>
+  </div>
+</header>
+
+<body v-cloak>
+
+  <dl v-if="list">
+    <template v-for="data of list">
+      <dd><img :src="data.snippet.thumbnails.default.url" /></dd>
+      <dd>
+        <h2>{{data.snippet.title}}</h2>
+        <p>{{data.snippet.description}}</p>
+      </dd>
+    </template>
+  </dl>
+
+
+  <!-- <br />
+  <h1>list</h1>
+  <dl v-if="listV">
+    <template v-for="(dataV) of listV">
+      <dt>{{dataV.snippet.title}}</dt>
+      <br />
+      <dd>{{dataV}}</dd> -->
+  <!-- <dd>{{listV}}</dd> -->
+  <!-- </template>
+  </dl> -->
+
+  <!-- <table v-if="listV"> -->
+  <div class="searchbox" v-if="show">
+    <input v-model="value" /><button @click="filt">
+      検索
+    </button>
+  </div>
+  <table v-if="flag">
+    <tr v-for="dataV in listV">
+      <td><a :href=`https://www.youtube.com/watch?v=${dataV.snippet.resourceId.videoId}`> <img
+          :src="dataV.snippet.thumbnails.medium.url" /></a>
+      </td>
+      <td class="content">
+        <h2>{{dataV.snippet.title}}</h2>
+        <p>{{dataV.snippet.publishedAt}}</p>
+        <a :href=`https://www.youtube.com/watch?v=${dataV.snippet.resourceId.videoId}` class="url">この動画を視聴する </a> </td> </tr>
+          </table> <table v-else-if="!flag">
+          <!-- <tr v-for="dataV in listV.filter((dataV) => dataV[this.snipped[this.title]].indexOf(this.value) !== -1)"> -->
+    <tr v-for="dataV in listV">
+      <td><a :href=`https://www.youtube.com/watch?v=${dataV.snippet.resourceId.videoId}`> <img
+          :src="dataV.snippet.thumbnails.medium.url" /></a></td>
+      <td class="content">
+        <h2>{{dataV.snippet.title}}</h2>
+        <p>{{dataV.snippet.publishedAt}}</p>
+        <a :href=`https://www.youtube.com/watch?v=${dataV.snippet.resourceId.videoId}` class="url">この動画を視聴する</a> </td> </tr>
+          </table> <!-- <table v-else-if="!flag">
+    <tr v-for="dataS in filtlist">
+      <td><a :href=`https://www.youtube.com/watch?v=${dataS.snippet.resourceId.videoId}`> <img
+          :src="dataS.snippet.thumbnails.medium.url" alt="" /></a></td>
+      <td>
+        <h2>{{dataS.snippet.title}}</h2>
+        <p>{{dataS.snippet.publishedAt}}</p>
+      </td>
+    </tr>
+  </table> -->
+
+
+  <script src="https://unpkg.com/petite-vue"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

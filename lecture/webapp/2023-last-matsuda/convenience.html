@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>フードアシスト</title>
+  </head>
+  <body >
+    <header>  
+      <ul>
+        <li><a href="cook.html">料理を作る</a></li>
+        <li><a href="convenience.html">コンビニで買う</a></li>
+        <li><a href="index.html">ホーム</a></li>
+      </ul>
+      </header>
+      
+    <div id="setsumei">
+      セブンイレブン、ローソン、ファミリーマートのおすすめ商品の紹介サイトです。
+      コンビニ名、価格、カロリー、栄養素から条件検索ができます。
+      価格、カロリーはすべて半角数字で入力してください。カートに追加するとカート内すべての商品の合計金額と合計カロリーが表示されます。
+    </div>
+    <div id="sentaku">
+      <p>コンビニを選択してください</p>
+      <select v-model="store">
+        <option value="">選択してください</option>
+        <option value="セブンイレブン">セブンイレブン</option>
+        <option value="ローソン">ローソン</option>
+        <option value="ファミリーマート">ファミリーマート</option>
+      </select>
+      <p>価格を入力してください</p>
+      <input type="number" v-model="price" />円以下
+      <p>カロリーを入力してください</p>
+      <input type="number" v-model="cal" />kcal以下
+      <p>栄養素を選択してください</p>
+      <select v-model="nut">
+        <option value="">選択してください</option>
+        <option value="炭水化物">炭水化物</option>
+        <option value="脂質">脂質</option>
+        <option value="タンパク質">タンパク質</option>
+      </select>
+      <br />
+      <button @click="clearFilters()">検索条件をクリアする</button>
+    </div>
+
+    <div id="cart">
+      <h2>カート</h2>
+      <div
+      v-if="showMessage"
+      v-bind:class="{ 'cart-message': true, 'hidden': !showMessage }"
+    >
+      {{ message }}
+    </div>
+      <ul>
+        <li v-for="(item, index) in cart" :key="index">
+          <img :src="item.img" alt="商品画像" width="100" />
+          <p id="cart_name">
+            {{ item.name }} <p>{{ item.price }}円</p>
+            <p>
+            ({{ item.calories }} kcal)</p>
+          </p>
+          <button @click=" removeFromCart(index) ">カートから削除</button>
+        </li>
+      </ul>
+
+      <p>合計価格: {{ totalAmount() }}円</p>
+      <p>合計カロリー: {{ totalCalories() }} kcal</p>
+      <p>不足している栄養素:{{ totalshort }}</p>
+    </div>
+
+    <p>検索結果{{searchProducts.length}}件</p>
+    <div id="kekka" :class="{ 'grid-layout': searchProducts.length > 0 }">
+      <div v-for="(product, index) in searchProducts" class="product-item">
+        <img :src="product.pimage" alt="商品画像" width="200" />
+        <p>商品名: {{ product.pname }}</p>
+        <p>店舗名: {{ product.pstore }}</p>
+        <p>価格: {{ product.pprice }}円（税込）</p>
+        <p>カロリー: {{ product.pcal }}kcal</p>
+        <p>栄養成分: {{ product.pnut }}</p>
+        <a :href="product.url" target="_blank" class="pagel">各社商品ページへ飛ぶ</a>
+
+        <button @click="addToCart(index)">カートに追加</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

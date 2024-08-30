@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Serif+JP&display=swap");
+body {
+  background-color: #f2eee6;
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header,
+#main {
+  text-align: center;
+}
+header {
+  position: relative;
+  color: olivedrab;
+  background-color: white;
+}
+header p {
+  margin-top: 0;
+  padding: 20px;
+}
+header h3 {
+  margin-top: 0;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.8);
+  /* -webkit-text-stroke: 0.1px #979797; */
+  font-size: 40px;
+  font-family: "Noto Sans JP", sans-serif;
+}
+img {
+  width: 70%;
+}
+a {
+  background-color: #ffffff;
+  text-decoration: none;
+  display: block;
+  width: 400px;
+  padding: 30px;
+  margin: 10px auto 30px;
+  text-align: center;
+  color: gray;
+  box-shadow: 2px 2px 4px gray;
+  font-size: small;
+}
+button {
+  border: none;
+}
+footer {
+  display: flex;
+  width: 35%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+footer > button {
+  background-color: #ffffff;
+  width: 155px;
+  padding: 17px;
+  color: gray;
+  box-shadow: 2px 2px 4px gray;
+}
+ul {
+  list-style-type: none;
+}
+.right {
+  text-align: right;
+}
+header h1 {
+  margin-top: 0;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>食べ物に関することわざ穴埋め</h1>
+    </header>
+    <main>
+      <p>【】に当てはまる言葉を選んでください</p>
+      <div class="block1">
+        <p>1) 一富士二鷹三【】</p>
+        <input type="radio" name="box11" v-model="box11" value="茄子" />1.
+        茄子<br />
+        <input type="radio" name="box11" v-model="box11" value="人参" />2.
+        人参<br />
+        <input type="radio" name="box11" v-model="box11" value="胡瓜" />3. 胡瓜
+        <div :style="myStyle">
+          <p>
+            答え:1. 茄子<br />
+            ことわざ:一富士二鷹三茄子
+            意味:夢に見ると縁起が良いとされるものを順に並べたもの
+          </p>
+        </div>
+      </div>
+
+      <div class="block2">
+        <p>2)【】登り</p>
+        <input type="radio" name="box12" v-model="box12" value="鮭" />1. 鮭<br />
+        <input type="radio" name="box12" v-model="box12" value="人参" />2. 鯉<br />
+        <input type="radio" name="box12" v-model="box12" value="鰻" />3.
+        鰻(うなぎ)
+        <div :style="myStyle">
+          <p>
+            答え:3. 鰻（うなぎ）<br />
+            ことわざ:鰻登り
+            意味:物事の段階がみるみるうちに急上昇することのたとえ
+          </p>
+        </div>
+      </div>
+
+      <div class="block3">
+        <p>3)【】が赤くなると医者は青くなる</p>
+        <input type="radio" name="box13" v-model="box13" value="唐辛子" />1.
+        唐辛子<br />
+        <input type="radio" name="box13" v-model="box13" value="ピーマン" />2.
+        ピーマン<br />
+        <input type="radio" name="box13" v-model="box13" value="トマト" />3.
+        トマト
+        <div :style="myStyle">
+          <p>
+            答え:3. トマト<br />
+            ことわざ:トマトが赤くなると医者は青くなる
+            意味:トマトが赤くなる秋は天候がよいので体調を崩す人は少なく、医者は商売にならずに青ざめるという意味
+          </p>
+        </div>
+      </div>
+
+      <div class="block4">
+        <p>4)【】役者</p>
+        <input
+          type="radio"
+          name="box14"
+          v-model="box14"
+          value="牛蒡(ごぼう)"
+        />1. 牛蒡(ごぼう)<br />
+        <input type="radio" name="box14" v-model="box14" value="豆腐" />2.
+        豆腐<br />
+        <input type="radio" name="box14" v-model="box14" value="大根" />3. 大根
+        <br />
+        <div :style="myStyle">
+          <p>
+            答え:3. 大根<br />
+            ことわざ:大根役者 意味:未熟で演技力のない下手な役者のこと
+          </p>
+        </div>
+      </div>
+
+      <div class="block5">
+        <p>5)火中の【】を拾う</p>
+        <input type="radio" name="box15" v-model="box15" value="栗" />1. 栗<br />
+        <input type="radio" name="box15" v-model="box15" value="芋" />2. 芋<br />
+        <input
+          type="radio"
+          name="box15"
+          v-model="box15"
+          value="豆
+      "
+        />3. 豆
+        <br />
+        <div :style="myStyle">
+          <p>
+            答え:1. 栗<br />
+            ことわざ:火中の栗を拾う
+            意味:自分の利益にはならないのに、そそのかされて他人のために危険をおかすことのたとえ
+          </p>
+        </div>
+      </div>
+
+      <div class="block6">
+        <p>6)鴨が【】を背負って来る</p>
+        <input type="radio" name="box16" v-model="box16" value="蕪" />1.
+        蕪(かぶ)<br />
+        <input type="radio" name="box16" v-model="box16" value="葱" />2.
+        葱(ねぎ)<br />
+        <input
+          type="radio"
+          name="box16"
+          v-model="box16"
+          value="筍
+      "
+        />3. 筍(たけのこ)
+        <br />
+        <div :style="myStyle">
+          <p>
+            答え: 2. 葱(ねぎ)<br />
+            ことわざ：鴨が葱を背負って来る
+            意味：うまいことが重なり、ますます好都合であることのたとえ
+          </p>
+        </div>
+      </div>
+
+      <div class="block7">
+        <p>7)【】で鯛を釣る</p>
+        <input type="radio" name="box17" v-model="box17" value="ミミズ" />1.
+        ミミズ<br />
+        <input type="radio" name="box17" v-model="box17" value="海老" />2.
+        海老<br />
+        <input type="radio" name="box17" v-model="box17" value="小魚" />3. 小魚
+        <br />
+        <input type="radio" name="box17" v-model="box17" value="イワシ" />4.
+        イワシ
+        <div :style="myStyle">
+          <p>
+            答え: 3. 海老<br />
+            ことわざ：秋茄子は嫁に食わすな
+            意味：秋にできる茄子は美味しいから嫁には食べさせるなという、姑（しゅうとめ）から嫁への意地悪なことば。また、秋茄子を食べると体が冷えて毒だから嫁には食べさせるなという、姑から嫁への思いやりのことばともいわれている。
+          </p>
+        </div>
+      </div>
+
+      <div class="block8">
+        <p>8)【】に福あり</p>
+        <input type="radio" name="box18" v-model="box18" value="食べ残し" />1.
+        食べ残し<br />
+        <input type="radio" name="box18" v-model="box18" value="余り飯" />2.
+        余り飯<br />
+        <input
+          type="radio"
+          name="box18"
+          v-model="box18"
+          value="食べかす
+      "
+        />3. 食べかす
+        <br />
+        <input type="radio" name="box18" v-model="box18" value="余り茶" />4.
+        余り茶
+        <div :style="myStyle">
+          <p>
+            答え: 4. 余り茶<br />
+            ことわざ：余り茶に福あり
+            意味：人の残した物に思わぬ幸福が潜んでいるという意味で、先を争って手を出すのは賢明ではないという戒めにも使う。
+          </p>
+        </div>
+      </div>
+
+      <div class="block9">
+        <p>9)棚から【】</p>
+        <input type="radio" name="box19" v-model="box19" value="お茶漬け" />1.
+        お茶漬け<br />
+        <input type="radio" name="box19" v-model="box19" value="牡丹餅" />2.
+        牡丹餅<br />
+        <input type="radio" name="box19" v-model="box19" value="漬物" />3. 漬物
+        <br />
+        <input
+          type="radio"
+          name="box19"
+          v-model="box19"
+          value="おやつ"
+        />4.おやつ
+        <div :style="myStyle">
+          <p>
+            答え: 2. 牡丹餅 <br />
+            ことわざ:棚から牡丹餅
+            意味:思いがけない幸運が舞い込む事。苦労もせずに、よいものを得る事。
+          </p>
+        </div>
+      </div>
+
+      <div class="block10">
+        <p>10)【】を洗うよう</p>
+        <input type="radio" name="box20" v-model="box20" value="かぼちゃ" />1.
+        かぼちゃ<br />
+        <input type="radio" name="box20" v-model="box20" value="芋" />2. 芋<br />
+        <input
+          type="radio"
+          name="box20"
+          v-model="box20"
+          value="自然薯(じねんじょ)"
+        />3. 自然薯(じねんじょ)
+        <br />
+        <input type="radio" name="box20" v-model="box20" value="米" />4.米
+        <div :style="myStyle">
+          <p>
+            答え: 2. 芋 <br />
+            ことわざ:芋を洗うよう
+            意味:かぎられた場所に沢山の人がいて、とても混雑している様子。
+          </p>
+        </div>
+      </div>
+      <div class="right">
+        <h2>{{message}}</h2>
+        <h1>点数：{{score}}/100</h1>
+      </div>
+    </main>
+
+    <footer>
+      <button type="button" onclick="location.href='home.html'">戻る</a>
+      <button @click="method" :disabled="scored" class="footer">
+        結果発表
+      </button>
+    </footer>
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

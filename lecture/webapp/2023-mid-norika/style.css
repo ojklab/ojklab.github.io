@@ -1,0 +1,97 @@
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+div p:nth-child(2) {
+  font-size: 15px;
+  text-align: right;
+  margin-top: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #000;
+  background: lemonchiffon;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: #e7e7e7;
+  padding: 0.5em;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+}
+
+button {
+  border-radius: 30px;
+  margin-left: 20px;
+  padding: 5px 10px;
+  background-color: lemonchiffon;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+div:not(:first-child) {
+  margin-left: 75px;
+}
+
+.east2,
+.choco2 {
+  margin-top: 25px;
+  padding-top: 60px;
+}
+
+.pon,
+.old,
+.fre,
+.east1,
+.east2,
+.choco1,
+.choco2 {
+  display: flex;
+  margin: auto;
+}
+
+.list {
+  margin-bottom: 100px;
+}
+
+.list p {
+  text-align: right;
+}
+
+.button_design1 {
+  font-size: 15px;
+  border-radius: 30px;
+  background-color: lemonchiffon;
+  padding: 15px 80px;
+  margin: auto;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.button_design2 {
+  font-size: 15px;
+  border-radius: 30px;
+  background-color: lemonchiffon;
+  padding: 15px 65px;
+  margin: auto;
+  display: block;
+}
