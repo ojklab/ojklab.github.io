@@ -1,0 +1,123 @@
+* {
+  font-family: 'IM Fell English SC', serif;
+}
+body {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 20px;
+  background-color: #b9c8e4;
+  text-align: center;
+}
+
+.box {
+  width: 94%;
+  text-align: right;
+}
+.icon {
+  width: 25px;
+}
+.num {
+  font-size: 1.3em;
+  margin-right: 10px;
+}
+.result {
+  text-align: center;
+  font-size: 2em;
+  padding-top: 25px;
+}
+
+input {
+  /* margin: 0 auto; */
+  width: 80%;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+  /* border-radius: 2px; */
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 10px;
+  /* padding-right: 15px; */
+}
+
+.flex img {
+  margin-left: 15px;
+  object-fit: contain;
+}
+
+.fukidasi {
+  width: 20%;
+  background-color: #030303;
+  color: white;
+  padding: 0 5px;
+  position: relative;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.flex div:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -10px;
+  border: 10px solid transparent;
+  border-left: 10px solid #030303;
+}
+
+.search-button {
+  border-color: #030303;
+  display: block;
+  /* margin: 0 auto; */
+  height: 55%;
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.invisible {
+  position: fixed;
+  display: none;
+}
+
+.visible {
+  font-size: 1.5em;
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  display: block;
+  background-color: aliceblue;
+  /* width: 80%; */
+  width: fit-content;
+  height: fit-content;
+  padding: 40px;
+  text-align: center;
+  /* margin: 0 auto; */
+}
+
+.title {
+  font-size: 1.5em;
+}
+.artist {
+  margin-top: -20px;
+  font-size: 1.2em;
+}
+.saveBtn {
+  display: block;
+  margin-left: auto;
+}
+
+/* mylist */
+
+.my-list-title {
+  /* padding-top: 15px; */
+  font-size: 1.2em;
+  margin: 15px;
+
+  text-align: center;
+}

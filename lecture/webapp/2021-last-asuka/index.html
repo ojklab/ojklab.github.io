@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>絵画検索</title>
+    <style>
+      [v-cloak] {
+        display: none;
+      }
+      .title {
+        font-size: 18px;
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body v-cloak @vue:mounted="init">
+    <div id="my-list" v-if="myList">
+      <div class="flex">
+        <img src="images/yajirushi.png" @click="back" width="5%" />
+        <p class="my-list-title">List of Favorites</p>
+      </div>
+      <div v-for="kd in kdata">
+        <p>{{kd.title}}</p>
+        <img :src="kd.primaryImage" width="100%" />
+      </div>
+    </div>
+
+    <!-- 検索画面 -->
+    <div id="screen1" v-if="search">
+      <div class="box">
+        <img class="icon" src=images/fav.png @click="showList">
+      </div>
+
+      <input v-model="query" placeholder="Enter a keyword" />
+
+      <div class="flex">
+        <div class="fukidasi">
+          <p style="font-size: 14px">Choose Country !</p>
+        </div>
+
+        <img
+          src="images/flag-italy.png"
+          @click="artistorculture='Italy'"
+          width="10%"
+        />
+
+        <img
+          src="images/flag-france.png"
+          @click="artistorculture='France'"
+          width="10%"
+        />
+
+        <img
+          src="images/flag-austria.png"
+          @click="artistorculture='Austria'"
+          width="10%"
+        />
+        <button class="search-button" @click="getResource">Search</button>
+      </div>
+
+      <p v-if="data" class="result">
+        <span class="num">{{data.total}}</span>works found.
+      </p>
+
+      <div :class="msg">It's Saved :)</div>
+
+      <div v-for="(d,idx) in data2" style="padding-bottom: 20px">
+        <p class="title">{{idx+1}}. {{d.title}}</p>
+        <p class="artist">{{d.artistAlphaSort}}</p>
+        <img
+          :src="d.primaryImage"
+          @click="invisible"
+          width="100%"
+          style="margin: 0 auto"
+        />
+
+        <button class="saveBtn" @click="keep(d)">Save</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
