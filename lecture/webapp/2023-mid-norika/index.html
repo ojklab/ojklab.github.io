@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>設計演習_中間課題</title>
+    <title>ドーナツの値段＆カロリー管理</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,21 +19,11 @@
     <p>① 予算：{{budget}}円</p>
     <p>② 理想摂取カロリー数：{{calorie}}kcal</p>
     <p>
-      <label
-        ><input
-          type="text"
-          v-model="budget"
-          size="18"
-          placeholder="予算を入力してください"
-      /></label>
+      <label><input type="text" v-model="budget" size="18" placeholder="予算を入力してください" /></label>
     </p>
     <p>
       <label
-        ><input
-          type="text"
-          v-model="calorie"
-          size="32"
-          placeholder="理想摂取カロリー数を入力してください"
+        ><input type="text" v-model="calorie" size="32" placeholder="理想摂取カロリー数を入力してください"
       /></label>
     </p>
 
