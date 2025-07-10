@@ -85,7 +85,7 @@ nav li a:hover {
   color: rosybrown;
 }
 
-div.container {
+main {
   max-width: 900px;
   box-sizing: border-box;
   margin: 0 auto;
@@ -147,8 +147,10 @@ section.top {
   margin-top: 3em;
 }
 
-.links a {
-  display: block;
+.links p {
+  font-weight: bold;
+  color: dimgray;
+  padding-bottom: 1ex;
 }
 
 /* fotter */
