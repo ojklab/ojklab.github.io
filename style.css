@@ -81,15 +81,21 @@ a.link-to-top {
   color: #bf783a;
 }
 
-#top-message {
+p#top-message {
   color: #364e96;
   font-weight: bold;
   margin-top: 3em;
-  margin-bottom: 3em;
+  line-height: 2;
   border: solid 5px #9de5ff;
-  padding: 1.5ex;
-  /* border-left: solid 5px #9de5ff; */
-  /* padding-left: 1ex; */
+  padding: 1em;
+}
+
+figure#tech {
+  text-align: center;
+}
+
+figure#tech img {
+  max-width: 100%;
 }
 
 p {
